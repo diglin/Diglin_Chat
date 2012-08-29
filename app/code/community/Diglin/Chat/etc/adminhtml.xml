@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <customer translate="title" module="customer">
+            <children>
+                <dashboard translate="title" module="chat">
+                    <title>Zopim Dashboard</title>
+                    <action>chat/admin/dashboard</action>
+                    <sort_order>50</sort_order>
+                </dashboard>
+            </children>
+        </customer>
+    </menu>
+
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <customer>
+                        <children>
+                            <dashboard translate="title">
+                                <title>Dashboard Zopim by diglin</title>
+                            </dashboard>
+                        </children>
+                    </customer>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <chat translate="title">
+                                        <title>Zopim Chat by diglin</title>
+                                    </chat>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

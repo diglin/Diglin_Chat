@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <diglin>
+            <label>Diglin</label>
+            <sort_order>400</sort_order>
+        </diglin>
+    </tabs>
+    
+    <sections>
+        <chat module="chat">
+            <label>Zopim Chat</label>
+            <tab>diglin</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>110</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <hint>
+                    <frontend_model>chat/adminhtml_config_source_hint</frontend_model>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </hint>
+                <chatconfig>
+                    <label>Global Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment><![CDATA[<a href="https://www.zopim.com/signup/trial?eref=rissip" target="_blank" title="Go to Zopim Website">Sign Up to Zopim to get a key</a>]]></comment>
+                    <fields>
+                        <enabled>
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <username>
+                            <label>Username (Default Agent/Owner email address)</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </username>        
+                        <key>
+                            <label>Key of your account</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>21</sort_order>
+                            <comment>You can find when you get the widget code to copy and paste. it's just after the "?" in ...//zopim.com/?... e.g. tQSvi0h1kK832654Mw82weFVthsbMRtBHr</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </key>                        
+                        <language>
+                            <label>Allow language synchronization</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_language</source_model>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </language>
+                        <allow_name>
+                            <label>Allow to display the name of the customer</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment>When this one is logged in.</comment>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allow_name>
+                        <allow_email>
+                            <label>Allow to display email of the customer</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment>When this one is logged in.</comment>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allow_email>
+                        <newapicall>
+                            <label>Use the new API call</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>36</sort_order>
+                            <comment>The javascript code of Zopim has been updated and may improve the performance. Theoritycally, if you set this option to "Yes", the loading time to load your pages will be faster, the drawback is that some of options here could not work properly. Please, let me know.</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </newapicall>
+                        <unreadflag>
+                            <label>Unread Flag</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment>Represents the little unread messages flag. No: Never show the little flag - Yes: Allow the little flag to be shown</comment>
+                            <sort_order>37</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </unreadflag>
+                        <message_chat_bar>
+                            <label>Message Shown on Chat Bar</label>
+                            <sort_order>39</sort_order>
+                            <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </message_chat_bar>
+                        <online_greeting_short>
+                            <label>Online Greeting Short</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </online_greeting_short>
+                        <offline_greeting_short>
+                            <label>Offline Greeting Short</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </offline_greeting_short>
+                        <away_greeting_short>
+                            <label>Away Greeting Short</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </away_greeting_short>                        
+                        <message_chat_panel>
+                            <label>Message Shown on Chat Panel</label>
+                            <sort_order>49</sort_order>
+                            <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </message_chat_panel>
+                        <online_greeting_long>
+                            <label>Online Greeting Long</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </online_greeting_long>
+                        <offline_greeting_long>
+                            <label>Offline Greeting Long</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </offline_greeting_long>
+                        <away_greeting_long>
+                            <label>Away Greeting Long</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </away_greeting_long>
+                    </fields>
+                </chatconfig>
+                <bubbleconfig>
+                    <label>Bubble Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <show>
+                            <label>Show the Bubble</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_showorhide</source_model>
+                            <sort_order>10</sort_order>
+                            <comment>If "Show" is selected, each time a page is reloaded, the bubble is displayed again. Auto, display it by default but if the user close it, it won't reappear until the end of session (2 minutes).</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show>
+                        <title>
+                            <label>Title text of the Bubble</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <text>
+                            <label>Main text of the Bubble</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text>
+                    </fields>
+                </bubbleconfig>
+                <windowconfig>
+                    <label>Window Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <swatches>
+                            <frontend_model>chat/adminhtml_config_source_color</frontend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </swatches>
+                        <color>
+                            <label>Color of the window</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <comment>Use the color swatches to be sure to get a correct display of the chat window. Provide here an hexa code e.g. #000000 for black color</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </color>
+                        <theme>
+                            <label>Theme</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_themes</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </theme>
+                    </fields>
+                </windowconfig>
+                <buttonconfig>
+                    <label>Button Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <show>
+                            <label>Show the button by default or not</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show>
+                        <position>
+                            <label>Position of the button</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_position</source_model>
+                            <comment>Pay attention, position "Left" or "Right" don't work on Safari during my test! </comment>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </position>
+                        <hidewhenoffline>
+                            <label>Hide when offline</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment>This prevents visitors from sending you offline messages</comment>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hidewhenoffline>
+                        <offset>
+                            <label>Offset of the button</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <comment>Adds additional spacing below the button</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </offset>
+                    </fields>
+                </buttonconfig>
+                <departments>
+                    <label>Departments Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <filter>
+                            <label>Filter</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <comment>Shows only certain departments. e.g. => 'technical support,'sales' </comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </filter>
+                    </fields>
+                </departments>
+            </groups>
+        </chat>
+    </sections>
+</config>
