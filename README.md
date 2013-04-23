@@ -30,7 +30,7 @@ The difference with the official Zopim Chat Module is that here you can define t
 - You can copy the files from the folders of this repository to the same folders of your installation
 
 ### Post Installation
-- After installation, save again the Administrator Role to get access to the configuration page of this module. Go to your Magento Backend, then Menu System > Permissions > Roles > Administrator and save again this role.
+- After installation, save again the Administrator Role to get access to the configuration page of this module. Go to your Magento Backend, then Menu <b>System > Permissions > Roles > Administrator</b> and save again this role.
 - Or login and logout from your backend to update the access control
 - Just configure the key of your account in Menu <b>System > Configuration > Diglin > Zopim Chat</b>. If you don't have one, you can get it one directly from the Magento configuration Zopim Chat page, thanks to the link or directly get one from [here](http://bit.ly/Z84KEE).
 To find this key, go into the Zopim Dashboard then click on "Widget" in the sidebar and find the link "Embed Zopim Live Chat Widget. In the area where the html code is generated, you can find after //zopim.com/?xyzbufoisfgsigsgdgjbsk. Copy the text after the question mark '?' to the Magento configuration field for the <b>"Key of your account"</b>.
