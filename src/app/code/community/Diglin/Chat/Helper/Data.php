@@ -13,8 +13,8 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
     }
     
     /**
-     * 
      * @param array $url
+     * @return array
      */
     public function getCurlOptions ($url)
     {
@@ -94,6 +94,7 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
     }
     
     /* Bubble Config */
+
     public function getBubbleShow ()
     {
         return Mage::getStoreConfig('chat/bubbleconfig/show');
@@ -103,13 +104,24 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return Mage::getStoreConfig('chat/bubbleconfig/title');
     }
-    
+
     public function getBubbleText ()
     {
         return Mage::getStoreConfig('chat/bubbleconfig/text');
     }
+
+    public function getBubbleColor ()
+    {
+        return Mage::getStoreConfig('chat/bubbleconfig/color');
+    }
     
     /* Window Config */
+
+    public function getWindowTitle ()
+    {
+        return Mage::getStoreConfig('chat/windowconfig/title');
+    }
+
     public function getWindowShow ()
     {
         return Mage::getStoreConfig('chat/windowconfig/show');
@@ -119,13 +131,34 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
     {
         return Mage::getStoreConfig('chat/windowconfig/color');
     }
-    
+
+    public function getWindowSize ()
+    {
+        return Mage::getStoreConfig('chat/windowconfig/size');
+    }
+
+    public function getWindowOffsetVertical ()
+    {
+        return (int) Mage::getStoreConfig('chat/windowconfig/offset_vertical');
+    }
+
+    public function getWindowOffsetHorizontal ()
+    {
+        return (int) Mage::getStoreConfig('chat/windowconfig/offset_horizontal');
+    }
+
+    public function getWindowPosition ()
+    {
+        return Mage::getStoreConfig('chat/windowconfig/position');
+    }
+
     public function getWindowTheme ()
     {
         return Mage::getStoreConfig('chat/windowconfig/theme');
     }
     
     /* Button Config */
+
     public function getButtonPosition ()
     {
         return Mage::getStoreConfig('chat/buttonconfig/position');
@@ -144,11 +177,6 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
     public function getButtonOffset ()
     {
         return Mage::getStoreConfig('chat/buttonconfig/offset');
-    }
-    
-    public function getUseNewApiCall ()
-    {
-        return (bool) Mage::getStoreConfig('chat/chatconfig/newapicall');
     }
     
     public function getDepartmentsFilter ()

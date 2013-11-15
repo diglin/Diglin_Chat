@@ -14,7 +14,12 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
         $this->_helper = Mage::helper('chat');
         parent::__construct();
     }
-    
+
+    /**
+     * Get the list of gretings options
+     *
+     * @return string
+     */
     public function getGreetingsOptions()
     {
         $data = array();        
@@ -22,71 +27,132 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
         $data[] = "'offline': ['".$this->_helper->getOfflineGreetingShort() . "', '" . $this->_helper->getOfflineGreetingLong() . "']";
         $data[] = "'away': ['".$this->_helper->getAwayGreetingShort() . "', '" . $this->_helper->getAwayGreetingLong() . "']";
         
-        if(count($data) > 0){
+        if (count($data) > 0) {
             $data = implode(',',$data);
             return "\$zopim.livechat.setGreetings({".$data."});";
-        }else
-            return;
+        }
+
+        return;
     }
-    
+
+    /**
+     * Get the language option
+     *
+     * @return null|string
+     */
     public function getLanguage()
     {
-        if($this->_helper->getLanguage() == 'auto'){
+        if ($this->_helper->getLanguage() == 'auto') {
             return null;
         };
         
-        if($this->_helper->getLanguage() == 'md'){
+        if ($this->_helper->getLanguage() == 'md') {
             return "language: '".substr(Mage::app()->getLocale()->getLocale(),0,2)."'";
-        }else{
-            return "language: '".$this->_helper->getLanguage()."'";
-        };
-    }
-    
-    public function getName()
-    {
-        return (($this->_helper->allowName() && strlen(Mage::helper('customer')->getCurrentCustomer()->getName()) > 0)?"name: '".Mage::helper('customer')->getCurrentCustomer()->getName()."'":null);
+        }
+
+        return "language: '".$this->_helper->getLanguage()."'";
     }
 
+    /**
+     * Get the name to display
+     *
+     * @return null|string
+     */
+    public function getName()
+    {
+        return (($this->_helper->allowName() && strlen(
+                Mage::helper('customer')->getCurrentCustomer()->getName()
+            ) > 0) ? "name: '" . Mage::helper('customer')->getCurrentCustomer()->getName() . "'" : null);
+    }
+
+    /**
+     * Get the email to link
+     *
+     * @return null|string
+     */
     public function getEmail()
     {
-        return (($this->_helper->allowEmail() && strlen(Mage::helper('customer')->getCurrentCustomer()->getEmail()) > 0)?"email: '".Mage::helper('customer')->getCurrentCustomer()->getEmail()."'":null);
+        return (($this->_helper->allowEmail() && strlen(
+                Mage::helper('customer')->getCurrentCustomer()->getEmail()
+            ) > 0) ? "email: '" . Mage::helper('customer')->getCurrentCustomer()->getEmail() . "'" : null);
     }
-    
+
+    /**
+     * get the Bubble options
+     *
+     * @return string
+     */
     public function getBubbleOptions()
     {
-        if(strlen($this->_helper->getBubbleTitle()) > 0){
-            $out[] = "\$zopim.livechat.bubble.setTitle('" . $this->_helper->getBubbleTitle() . "')";    
+        if (strlen($this->_helper->getBubbleTitle()) > 0) {
+            $out[] = "\$zopim.livechat.bubble.setTitle('" . $this->_helper->getBubbleTitle() . "')";
         }
-        
-        if(strlen($this->_helper->getBubbleText()) > 0){
-            $out[] = "\$zopim.livechat.bubble.setText('" . $this->_helper->getBubbleText() . "')";    
+
+        if (strlen($this->_helper->getBubbleText()) > 0) {
+            $out[] = "\$zopim.livechat.bubble.setText('" . $this->_helper->getBubbleText() . "')";
         }
-        
-        if($this->_helper->getBubbleShow() == 'show' || $this->getForceBubbleDisplay()){
+
+        if (strlen($this->_helper->getBubbleColor()) > 0) {
+            $out[] = "\$zopim.livechat.bubble.setColor('" . $this->_helper->getBubbleColor() . "')";
+        }
+
+        if ($this->_helper->getBubbleShow() == 'show' || $this->getForceBubbleDisplay()) {
             $out[] = "\$zopim.livechat.bubble.show()";
-        }elseif($this->_helper->getBubbleShow() == 'hide'){
+        } elseif ($this->_helper->getBubbleShow() == 'hide') {
             $out[] = "\$zopim.livechat.bubble.hide()";
+        } elseif ($this->_helper->getBubbleShow() == 'reset') { // reset on each page reload
+            $out[] = "\$zopim.livechat.bubble.reset()";
         }
-        
-        if(isset($out) && count($out) > 0){
-            return implode(';' . "\n",$out) . ';' . "\n";
-        }else
-            return;
+
+        if (isset($out) && count($out) > 0) {
+            return implode(';' . "\n", $out) . ';' . "\n";
+        }
+
+        return;
     }
-    
-    
+
+    /**
+     * Get the options to define for the window
+     *
+     * @return string
+     */
     public function getWindowOptions()
     {
-        if(strlen($this->_helper->getWindowColor()) > 0){
+        if (strlen($this->_helper->getWindowShow()) > 0) {
+            $out[] = "\$zopim.livechat.window.setTitle('" . $this->_helper->getWindowShow() . "')";
+        }
+
+        if (strlen($this->_helper->getWindowTitle()) > 0) {
+            $out[] = "\$zopim.livechat.window.setTitle('" . $this->_helper->getWindowTitle() . "')";
+        }
+
+//        if (strlen($this->_helper->getWindowSize()) > 0) {
+//            $out[] = "\$zopim.livechat.window.setSize('" . $this->_helper->getWindowSize() . "')";
+//        }
+
+        if (strlen($this->_helper->getWindowColor()) > 0) {
             $out[] = "\$zopim.livechat.window.setColor('" . $this->_helper->getWindowColor() . "')";
         }
-        
+
+        if (strlen($this->_helper->getWindowPosition()) > 0) {
+            $out[] = "\$zopim.livechat.window.setPosition('" . $this->_helper->getWindowPosition() . "')";
+        }
+
+        if (strlen($this->_helper->getWindowOffsetVertical()) > 0) {
+            $out[] = "\$zopim.livechat.window.setOffsetVertical('" . $this->_helper->getWindowOffsetVertical() . "')";
+        }
+
+        if (strlen($this->_helper->getWindowOffsetHorizontal()) > 0) {
+            $out[] = "\$zopim.livechat.window.setOffsetHorizontal('" . $this->_helper->getWindowOffsetHorizontal() . "')";
+        }
+
         $out[] = "\$zopim.livechat.window.setTheme('" . $this->_helper->getWindowTheme() . "')";
-        
-        if(isset($out) && count($out) > 0){
-            return implode(';' . "\n",$out) . ';' . "\n";
-        }else
-            return;
+
+        if (isset($out) && count($out) > 0) {
+            return implode(';' . "\n", $out) . ';' . "\n";
+        }
+
+        return;
     }
     
     public function getButtonOptions()
@@ -134,10 +200,11 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
     
     public function getDepartmentsOptions()
     {
-        if( $this->_helper->getDepartmentsFilter() ) {
+        if ($this->_helper->getDepartmentsFilter()) {
             $out[] = "\$zopim.livechat.departments.filter(" . $this->_helper->getDepartmentsFilter() . ")";
-            return implode(';' . "\n", $out). ';' . "\n";
-        }else{
+
+            return implode(';' . "\n", $out) . ';' . "\n";
+        } else {
             return;
         }
     }
@@ -147,65 +214,53 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
         $out[] = "\$zopim.livechat.unreadflag = " . (($this->_helper->getUnreadFlag())?'\'enable\'':'\'disable\'');
         return implode(';' . "\n", $out). ';' . "\n";
     }
-    
+
     protected function _toHtml()
     {
-        if($this->_helper->getEnabled()) {
-            
-            if(!$this->_helper->getUseNewApiCall()) {
-                $output = <<<SCRIPT
-<script type="text/javascript">
-document.write(unescape("%3Cscript src='" + document.location.protocol + "//zopim.com/?{$this->_helper->getKey()}' charset='utf-8' type='text/javascript'%3E%3C/script%3E"));
-</script>
-SCRIPT;
-            } else {
-                $output = <<<SCRIPTONDEMAND
-<!-- Start of Zopim Live Chat Script -->
-<script type="text/javascript">
-window.\$zopim||(function(d,s){var z=\$zopim=function(c){z._.push(c)},$=
-z.s=d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o
-){z.set._.push(o)};$.setAttribute('charset','utf-8');$.async=!0;z.set.
-_=[];$.src=('https:'==d.location.protocol?'https://ssl':'http://cdn')+
-'.zopim.com/?{$this->_helper->getKey()}';$.type='text/java'+s;z.
-t=+new Date;z._=[];e.parentNode.insertBefore($,e)})(document,'script')
-</script>
-<!-- End of Zopim Live Chat Script -->
-SCRIPTONDEMAND;
-            }
-            
-            if(strlen($this->getName()) > 0){
+        if ($this->_helper->getEnabled()) {
+
+            /* @var $block Mage_Core_Block_Template */
+            $block = $this->getLayout()->createBlock(
+                'core/template',
+                'zopim_chat',
+                array(
+                    'template' => 'chat/zopim/widget.phtml',
+                    'key' => $this->_helper->getKey()
+                )
+            );
+
+            if (strlen($this->getName()) > 0) {
                 $data[] = $this->getName();
             }
-            if(strlen($this->getEmail()) > 0){
+            if (strlen($this->getEmail()) > 0) {
                 $data[] = $this->getEmail();
             }
-            if(strlen($this->getLanguage()) > 0){
+            if (strlen($this->getLanguage()) > 0) {
                 $data[] = $this->getLanguage();
             }
-            
-            $output .= "\n";
-            
-            if(isset($data) && count($data) > 0)
-            {
-                $line = implode ( ',', $data );
+
+            if (isset($data) && count($data) > 0) {
+                $line = implode(',', $data);
                 $script = "\$zopim.livechat.set({ $line });" . "\n";
             }
-            
+
             $script .= $this->getWindowOptions();
             $script .= $this->getButtonOptions();
             $script .= $this->getBubbleOptions();
             $script .= $this->getGreetingsOptions();
-            if($this->_helper->getUseNewApiCall()){
-                $script .= $this->getDepartmentsOptions();
-                $script .= $this->getUnreadFlagOptions();
+            $script .= $this->getDepartmentsOptions();
+            $script .= $this->getUnreadFlagOptions();
+
+            if (strlen($script) > 0) {
+                $script = '$zopim(function(){' . $script . '});' . "\n";
+                $zopimOptions = '<script type="text/javascript">' . "\n" . $script . "</script>";
             }
-            if(strlen($script) > 0){
-                if($this->_helper->getUseNewApiCall()) $script = '$zopim(function(){' . $script . '});'."\n";
-                $output .= '<script type="text/javascript">' ."\n". $script . "</script>";
-            }
-            
-            return $output;
-        }else
-            return;
+
+            $block->setZopimOptions($zopimOptions);
+
+            return $block->toHtml();
         }
+
+        return;
+    }
 }

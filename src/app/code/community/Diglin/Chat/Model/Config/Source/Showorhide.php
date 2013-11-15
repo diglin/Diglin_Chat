@@ -1,7 +1,6 @@
 <?php
 class Diglin_Chat_Model_Config_Source_Showorhide
 {
-
     /**
      * Options getter
      *
@@ -15,5 +14,4 @@ class Diglin_Chat_Model_Config_Source_Showorhide
             array('value' => 'hide', 'label'=>Mage::helper('chat')->__('Hide')),
         );
     }
-
 }

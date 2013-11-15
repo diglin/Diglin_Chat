@@ -31,7 +31,7 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <comment><![CDATA[<a href="http://bit.ly/Z84KEE" target="_blank" title="Go to Zopim Website">Sign Up to Zopim to get a key</a>]]></comment>
+                    <comment><![CDATA[<a href="https://www.zopim.com/signup/trial?eref=rissip" target="_blank" title="Go to Zopim Website">Sign Up to Zopim to get a key</a>]]></comment>
                     <fields>
                         <enabled>
                             <label>Enabled</label>
@@ -88,16 +88,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </allow_email>
-                        <newapicall>
-                            <label>Use the new API call</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>36</sort_order>
-                            <comment>The javascript code of Zopim has been updated and may improve the performance. Theoritycally, if you set this option to "Yes", the loading time to load your pages will be faster, the drawback is that some of options here could not work properly. Please, let me know.</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </newapicall>
                         <unreadflag>
                             <label>Unread Flag</label>
                             <frontend_type>select</frontend_type>
@@ -208,6 +198,14 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </text>
+                        <color>
+                            <label>Color of the Bubble</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </color>
                     </fields>
                 </bubbleconfig>
                 <windowconfig>
@@ -218,6 +216,24 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+                        <show>
+                            <label>Show the window</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_showorhide</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show>
+                        <title>
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Set the title of the chat window.</comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
                         <swatches>
                             <frontend_model>chat/adminhtml_config_source_color</frontend_model>
                             <sort_order>20</sort_order>
@@ -226,7 +242,7 @@
                             <show_in_store>1</show_in_store>
                         </swatches>
                         <color>
-                            <label>Color of the window</label>
+                            <label>Color</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>30</sort_order>
                             <comment>Use the color swatches to be sure to get a correct display of the chat window. Provide here an hexa code e.g. #000000 for black color</comment>
@@ -234,11 +250,49 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </color>
+                        <size>
+                            <label>Size</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_windowsize</source_model>
+                            <comment>Set the size of the chat window.  Allowed values: small, medium, large.</comment>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </size>
+                        <offset_vertical>
+                            <label>Vertical Offset</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Set the vertical offset value (integer only) of the chat window from the edge of the browser window.</comment>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </offset_vertical>
+                        <offset_horizontal>
+                            <label>Horizontal Offset</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Set the horizontal offset value (integer only) of the chat window from the edge of the browser window.</comment>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </offset_horizontal>
+                        <position>
+                            <label>Window position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_windowposition</source_model>
+                            <comment>Set position of the chat window.</comment>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </position>
                         <theme>
                             <label>Theme</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_themes</source_model>
-                            <sort_order>40</sort_order>
+                            <sort_order>100</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
