@@ -1,5 +1,5 @@
 <?php
-class Diglin_Chat_Model_Config_Source_Windowsize
+class Diglin_Chat_Model_Config_Source_WindowSize
 {
 
     /**
@@ -10,9 +10,9 @@ class Diglin_Chat_Model_Config_Source_Windowsize
     public function toOptionArray()
     {
         return array(
-            array('value' => 'small', 'label'=>Mage::helper('chat')->__('Small')),
-            array('value' => 'medium', 'label'=>Mage::helper('chat')->__('Medium')),
-            array('value' => 'large', 'label'=>Mage::helper('chat')->__('Large')),
+            array('value' => 'small', 'label' => Mage::helper('chat')->__('Small')),
+            array('value' => 'medium', 'label' => Mage::helper('chat')->__('Medium')),
+            array('value' => 'large', 'label' => Mage::helper('chat')->__('Large')),
         );
     }
 

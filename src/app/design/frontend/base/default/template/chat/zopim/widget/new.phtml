@@ -1,0 +1,31 @@
+<?php
+/**
+ *
+ * @category   Diglin
+ * @package    Diglin_Chat
+ * @copyright  Copyright (c) 2014 Diglin GmbH - Switzerland
+ * @license    none
+ * @version    1.0.0
+ * @link       https://github.com/diglin/Diglin_Chat
+ * @author     Sylvain Rayé <firstname.lastname@diglin.com>
+ * @since      File available since Release 1.0.0
+ */
+
+/* @var $this Mage_Core_Block_Template */
+?>
+<?php if ($this->getKey()): ?>
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='//v2.zopim.com/?<?php echo $this->getKey() ?>';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
+<!--Zopim Options-->
+<script><?php echo ($this->getZopimOptions()) ? '$zopim(function(){' . $this->getZopimOptions() . '});' . "\n" : ''; ?></script>
+<!--EOF Zopim Options-->
+<?php else: ?>
+<!-- Zopim Widget is missing because the key is not defined -->
+<?php endif ?>

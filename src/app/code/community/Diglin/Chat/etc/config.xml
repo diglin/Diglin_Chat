@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Diglin_Chat>
-            <version>1.2.0</version>
+            <version>2.0.0</version>
         </Diglin_Chat>
     </modules>
     
@@ -13,7 +13,7 @@
                 <language>md</language>
                 <allow_name>1</allow_name>
                 <allow_email>1</allow_email>
-                <newapicall>1</newapicall>
+                <widget>0</widget>
                 <online_greeting_short>Click here to chat</online_greeting_short>
                 <offline_greeting_short>Leave a message</offline_greeting_short>
                 <away_greeting_short>Click here to chat</away_greeting_short>
@@ -21,16 +21,30 @@
                 <offline_greeting_long>We are offline, but if you leave your message and contact details, we will try to get back to you =)</offline_greeting_long>
                 <away_greeting_long>If you leave a question or comment, our agents will be notified and will try to attend to you shortly =)</away_greeting_long>
             </chatconfig>
-            <buttonconfig>
-                <show>1</show>
-                <position>bl</position>
-                <hidewhenonline>0</hidewhenonline>
-            </buttonconfig>
-			<bubbleconfig>
-				<show></show>
-				<title>Questions?</title>
-				<text>Click here to chat with us!</text>
-			</bubbleconfig>
+            <widgetconfig>
+                <bubble_show>1</bubble_show>
+                <bubble_title>Questions?</bubble_title>
+                <bubble_text>Click here to chat with us!</bubble_text>
+
+                <button_show>1</button_show>
+                <button_position>bl</button_position>
+                <button_hidewhenonline>0</button_hidewhenonline>
+                <!-- Classic Widget -->
+                <button_offset_bottom>0</button_offset_bottom>
+                <!-- New Widget -->
+                <button_offset_horizontal>0</button_offset_horizontal>
+                <button_offset_vertical>0</button_offset_vertical>
+
+                <window_title>Support</window_title>
+                <window_offset_horizontal>0</window_offset_horizontal>
+                <window_offset_vertical>0</window_offset_vertical>
+
+                <concierge_name>Live Support</concierge_name>
+                <concierge_title>Ask us anything</concierge_title>
+
+                <badge_layout>image_left</badge_layout>
+                <badge_text>Chat with us</badge_text>
+            </widgetconfig>
         </chat>
     </default>
 
@@ -54,13 +68,23 @@
 
     <frontend>
         <layout>
-            <updates module="chat">
+            <updates module="Diglin_Chat">
                 <chat>
                     <file>chat.xml</file>
                 </chat>
             </updates>
         </layout>
     </frontend>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <chat module="Diglin_Chat">
+                    <file>chat.xml</file>
+                </chat>
+            </updates>
+        </layout>
+    </adminhtml>
 
     <admin>
        <routers>

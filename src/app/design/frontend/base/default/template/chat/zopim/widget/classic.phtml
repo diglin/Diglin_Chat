@@ -21,7 +21,10 @@ _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
 $.src='//cdn.zopim.com/?<?php echo $this->getKey() ?>';z.t=+new Date;$.
 type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 </script><!--End of Zopim Live Chat Script-->
-<?php echo $this->getZopimOptions(); ?>
+<!--End of Zopim Live Chat Script-->
+<!--Zopim Options-->
+<script><?php echo ($this->getZopimOptions()) ? '$zopim(function(){' . $this->getZopimOptions() . '});' . "\n" : ''; ?></script>
+<!--EOF Zopim Options-->
 <?php else: ?>
 <!-- Zopim Widget is missing because the key is not defined -->
 <?php endif ?>

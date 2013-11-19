@@ -29,10 +29,11 @@
 	<default>
 		<reference name="before_body_end">
 			<block type="chat/display" name="chat_zopim_default">
-<!--				<action method="forceButtonDisplay"><value>1</value></action>-->
-<!--				<action method="forceBubbleDisplay"><value>1</value></action>-->
+<!--				<action method="setForceButtonDisplay"><value>1</value></action>-->
+<!--				<action method="setForceBubbleDisplay"><value>1</value></action>-->
 			</block>
-			<!-- block type="core/template" name="foot" template="chat/chat.phtml" Javascript links for Test Only -->
+            <!-- Javascript links for Test Only -->
+			<block type="core/template" ifconfig="chat/chatconfig/debug" name="chat_footer" template="chat/zopim/test.phtml"/>
 		</reference>
 	</default>
 </layout>
