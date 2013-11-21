@@ -18,20 +18,4 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Model_Config_Source_Layout
-{
-    /**
-     * Options getter
-     *
-     * @return array
-     */
-    public function toOptionArray()
-    {
-        return array(
-            array('value' => 'image_right', 'label' => Mage::helper('chat')->__('Image Right')),
-            array('value' => 'image_left', 'label' => Mage::helper('chat')->__('Image Left')),
-            array('value' => 'image_only', 'label' => Mage::helper('chat')->__('Image Only')),
-            array('value' => 'text_only', 'label' => Mage::helper('chat')->__('Text Only')),
-        );
-    }
-}
+class Diglin_Chat_Model_Resource_Setup extends Mage_Core_Model_Resource_Setup {}

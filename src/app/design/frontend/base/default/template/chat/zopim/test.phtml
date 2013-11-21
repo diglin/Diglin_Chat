@@ -1,11 +1,32 @@
+<?php
+/**
+ * Diglin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    Diglin
+ * @package     Diglin_Chat
+ * @copyright   Copyright (c) 2011-2014 Diglin (http://www.diglin.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php if (Mage::getStoreConfigFlag('chat/chatconfig/debug')): ?>
 <!-- For test only -->
 Show hide window
 <a href="javascript:void($zopim.livechat.window.hide())">Hide</a>
 <a href="javascript:void($zopim.livechat.window.show())">Show</a>
-<a href="javascript:void($zopim.livechat.window.setOffsetVertical(20));">Position vertical 20</a>
-<a href="javascript:void($zopim.livechat.window.setOffsetHorizontal(30));">Position horizontal 40</a>
+<a href="javascript:void($zopim.livechat.window.setOffsetVertical(20));">Position vertical 20 (Only new widget)</a>
+<a href="javascript:void($zopim.livechat.window.setOffsetHorizontal(30));">Position horizontal 40 (Only new widget)</a>
 <br>
-Change size
+Change size (Only new widget)
 <a href="javascript:void($zopim.livechat.window.setSize('small'))">small</a>
 <a href="javascript:void($zopim.livechat.window.setSize('medium'))">medium</a>
 <a href="javascript:void($zopim.livechat.window.setSize('large'))">large</a>
@@ -19,6 +40,8 @@ Window Position
 Show hide Button
 <a href="javascript:void($zopim.livechat.button.hide())">Hide</a>
 <a href="javascript:void($zopim.livechat.button.show())">Show</a>
+<a href="javascript:void($zopim.livechat.button.setOffsetBottom(20))">Position Offset Bottom 20 (Only new widget)</a>
+<a href="javascript:void($zopim.livechat.button.setOffsetVertical(40))">Position Offset Vertical 40 (Only new widget)</a>
 <br/>
 Show Hide Bubble
 <a href="javascript:void($zopim.livechat.bubble.hide())">Hide</a>
@@ -30,3 +53,17 @@ Position
 <a href="javascript:void($zopim.livechat.button.setPosition('br'))">Bottom right</a>
 <a href="javascript:void($zopim.livechat.button.setPosition('bm'))">Bottom middle</a>
 <br>
+Select Widget Type
+<a href="javascript:void($zopim.livechat.theme.setTheme('simple'))">Simple</a>
+<a href="javascript:void($zopim.livechat.theme.setTheme('classic'))">Classic</a>
+<br>
+Select Window Theme Type (Old Widget)
+<a href="javascript:void($zopim.livechat.window.setTheme('alphacube'))">Alphacube</a>
+<a href="javascript:void($zopim.livechat.window.setTheme('plastic'))">Plastic</a>
+<a href="javascript:void($zopim.livechat.window.setTheme('solid'))">solid</a>
+<a href="javascript:void($zopim.livechat.window.setTheme('macos'))">Macos</a>
+<a href="javascript:void($zopim.livechat.window.setTheme('window7'))">Windows7</a>
+<a href="javascript:void($zopim.livechat.window.setTheme('chrome'))">Chrome</a>
+<a href="javascript:void($zopim.livechat.window.setTheme('floral'))">Floral</a>
+<br>
+<?php endif ?>

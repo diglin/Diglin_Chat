@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Diglin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Diglin
+ * @package     Diglin_Chat
+ * @copyright   Copyright (c) 2011-2014 Diglin (http://www.diglin.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
 <config>
     <tabs>
         <diglin>
@@ -53,7 +79,7 @@
                         <key>
                             <label>Key of your account</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>21</sort_order>
+                            <sort_order>30</sort_order>
                             <comment>You can find when you get the widget code to copy and paste. it's just after the "?" in ...//zopim.com/?... e.g. tQSvi0h1kK832654Mw82weFVthsbMRtBHr</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -63,7 +89,7 @@
                             <label>Allow language synchronization</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_language</source_model>
-                            <sort_order>25</sort_order>
+                            <sort_order>40</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -73,7 +99,7 @@
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <comment>When this one is logged in.</comment>
-                            <sort_order>30</sort_order>
+                            <sort_order>50</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -83,7 +109,7 @@
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <comment>When this one is logged in.</comment>
-                            <sort_order>35</sort_order>
+                            <sort_order>60</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -92,7 +118,7 @@
                             <label>Disable sound notifications</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>21</sort_order>
+                            <sort_order>70</sort_order>
                             <comment>Configure whether sound notifications are played.</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -102,78 +128,12 @@
                             <label>Debug</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>22</sort_order>
+                            <sort_order>80</sort_order>
                             <comment>Display in the footer some links to test how react the chat.</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </debug>
-
-                        <message_chat_bar>
-                            <label>Message Shown on Chat Bar (Only with classic Widget - see Widget configuration below)</label>
-                            <sort_order>39</sort_order>
-                            <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </message_chat_bar>
-                        <online_greeting_short>
-                            <label>Online Greeting Short</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>40</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </online_greeting_short>
-                        <offline_greeting_short>
-                            <label>Offline Greeting Short</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>41</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </offline_greeting_short>
-                        <away_greeting_short>
-                            <label>Away Greeting Short</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>42</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </away_greeting_short>
-
-                        <message_chat_panel>
-                            <label>Message Shown on Chat Panel</label>
-                            <sort_order>49</sort_order>
-                            <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </message_chat_panel>
-                        <online_greeting_long>
-                            <label>Online Greeting Long</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>50</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </online_greeting_long>
-                        <offline_greeting_long>
-                            <label>Offline Greeting Long</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>51</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </offline_greeting_long>
-                        <away_greeting_long>
-                            <label>Away Greeting Long</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>52</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </away_greeting_long>
                     </fields>
                 </chatconfig>
 
@@ -184,152 +144,189 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <comment><![CDATA[<ul><li>- <strong>IMPORTANT</strong>: If you have the lite plan, not all features will be functional. <a href="/chat/admin/dashboard">Check the plan</a> you have.</li><li>- The chat bubble is only available when using the classic theme. All bubble configuration will have no effect if the class theme is in use.</li></ul>]]></comment>
+                    <depends>
+                        <widget_api>1</widget_api>
+                    </depends>
+                    <comment><![CDATA[<ul><li>- <strong>IMPORTANT</strong>: If you have the lite plan, not all features will be functional like widget customization (e.g. color). <a href="/chat/admin/dashboard">Check the plan</a> you have.</li><li>- The chat bubble is only available when using the classic theme in other cases, all bubble configuration will have no effect.</li></ul>]]></comment>
                     <fields>
                         <general_config>
                             <label>General Config</label>
-                            <sort_order>10</sort_order>
+                            <sort_order>1</sort_order>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </general_config>
-                        <widget>
-                            <label>Classic or new Widget</label>
+                        <widget_api>
+                            <label>Widget API</label>
                             <frontend_type>select</frontend_type>
-                            <source_model>chat/config_source_widget</source_model>
-                            <sort_order>20</sort_order>
+                            <source_model>chat/config_source_api</source_model>
+                            <comment>Since year 2013, new widget appeared. Some features related to this new widget may not work correctly. Zopim works to fix those problems.</comment>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </widget_api>
+                        <window_type>
+                            <label>Classic or Simple Widget</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_window</source_model>
+                            <sort_order>3</sort_order>
                             <comment>The other configuration depends on this value. Each type of widget has his own set of options.</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </widget>
+                            <depends>
+                                <widget_api>new</widget_api>
+                            </depends>
+                        </window_type>
+
                         <unreadflag>
                             <label>Unread Flag</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <comment>Represents the little unread messages flag. No: Never show the little flag - Yes: Allow the little flag to be shown</comment>
-                            <sort_order>21</sort_order>
+                            <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>0</widget>
+                                <widget_api>old</widget_api>
                             </depends>
                         </unreadflag>
 
-                        <!-- Theme Config (New Widget only) -->
+                        <message_chat_bar>
+                            <label>Message Shown on Chat Bar</label>
+                            <sort_order>5</sort_order>
+                            <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </message_chat_bar>
+                        <online_greeting_short>
+                            <label>Online Greeting Short</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </online_greeting_short>
+                        <offline_greeting_short>
+                            <label>Offline Greeting Short</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </offline_greeting_short>
+                        <away_greeting_short>
+                            <label>Away Greeting Short</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <widget_api>old</widget_api>
+                            </depends>
+                        </away_greeting_short>
+
+                        <message_chat_panel>
+                            <label>Message Shown on Chat Panel</label>
+                            <sort_order>9</sort_order>
+                            <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <widget_api>old</widget_api>
+                            </depends>
+                        </message_chat_panel>
+                        <online_greeting_long>
+                            <label>Online Greeting Long</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <widget_api>old</widget_api>
+                            </depends>
+                        </online_greeting_long>
+                        <offline_greeting_long>
+                            <label>Offline Greeting Long</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <widget_api>old</widget_api>
+                            </depends>
+                        </offline_greeting_long>
+                        <away_greeting_long>
+                            <label>Away Greeting Long</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <widget_api>old</widget_api>
+                            </depends>
+                        </away_greeting_long>
+
+                        <!-- Theme Config -->
 
                         <theme_config>
-                            <label>Theme Configuration (New Widget only)</label>
+                            <label>Theme Configuration</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
-                            <sort_order>22</sort_order>
+                            <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>1</widget>
-                            </depends>
                         </theme_config>
-                        <theme_themes>
-                            <label>Widget Theme</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>chat/config_source_newthemes</source_model>
-                            <sort_order>23</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>1</widget>
-                            </depends>
-                        </theme_themes>
                         <theme_primary_color>
                             <label>Primary Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>
-                            <sort_order>24</sort_order>
+                            <sort_order>21</sort_order>
                             <comment><![CDATA[Set the primary color. Color in hexadecimal format (‘AABBCC’)]]></comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>1</widget>
-                            </depends>
                         </theme_primary_color>
                         <theme_badge_color>
                             <label>Badge Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>
-                            <sort_order>25</sort_order>
+                            <sort_order>22</sort_order>
                             <comment><![CDATA[Set the badge color. Color in hexadecimal format ('AABBCC’)]]></comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
+                                <widget_api>new</widget_api>
+                                <window_type>simple</window_type>
                             </depends>
                         </theme_badge_color>
                         <theme_bubble_color>
-                            <label>Bubble Color</label>
+                            <label>Bubble Color (classic theme only)</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>
-                            <sort_order>26</sort_order>
+                            <sort_order>23</sort_order>
                             <comment><![CDATA[Set the bubble color. Color in hexadecimal format (‘AABBCC’)]]></comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>1</widget>
-                                <theme_themes>classic</theme_themes>
-                            </depends>
                         </theme_bubble_color>
-
-                        <!-- Bubble Config -->
-
-                        <bubble_config>
-                            <label>Bubble Configuration (Only with Classic Widget OR New Widget with classic theme)</label>
-                            <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
-                            <sort_order>30</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </bubble_config>
-                        <bubble_show>
-                            <label>Show the Bubble</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>chat/config_source_showorhide</source_model>
-                            <sort_order>40</sort_order>
-                            <comment>Bubble only available with the classic theme or widget. Show: If the user hides or has hidden the chat bubble, it will remain hidden on subsequent page loads until the current session expires, or the reset API function is called.</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </bubble_show>
-                        <bubble_title>
-                            <label>Title</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>50</sort_order>
-                            <comment>Set the title displayed on the chat bubble.</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </bubble_title>
-                        <bubble_text>
-                            <label>Text</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>60</sort_order>
-                            <comment>Set the text displayed on the chat bubble.</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </bubble_text>
 
                         <!-- Window Config -->
 
                         <window_config>
                             <label>Window Configuration</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
-                            <sort_order>80</sort_order>
+                            <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -338,7 +335,7 @@
                             <!--<label>Show the window</label>-->
                             <!--<frontend_type>select</frontend_type>-->
                             <!--<source_model>chat/config_source_showorhide</source_model>-->
-                            <!--<sort_order>90</sort_order>-->
+                            <!--<sort_order>40</sort_order>-->
                             <!--<comment><![CDATA[Show the chat window. MOBILE: If on a mobile device, attempts to open the live chat widget in a new window instead. May not work on some devices or configurations. Important: Should only be called from a user event listener callback. e.g. <a href="javascript:void($zopim.livechat.window.show())">Open chat in new window</a>-->
 <!--]]></comment>-->
                             <!--<show_in_default>1</show_in_default>-->
@@ -349,113 +346,98 @@
                             <label>Top Title</label>
                             <frontend_type>text</frontend_type>
                             <comment>Set the title on the top of the chat window.</comment>
-                            <sort_order>100</sort_order>
+                            <sort_order>50</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <window_type>simple</window_type>
+                                <widget_api>new</widget_api>
                             </depends>
                         </window_title>
                         <window_theme>
                             <label>Theme</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_classicthemes</source_model>
-                            <sort_order>110</sort_order>
+                            <sort_order>60</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>0</widget>
+                                <widget_api>old</widget_api>
                             </depends>
                         </window_theme>
-                        <window_color>
-                            <label>Color</label>
-                            <frontend_type>text</frontend_type>
-                            <validate>color</validate>
-                            <sort_order>130</sort_order>
-                            <comment>Provide here an hexa code e.g. 000000 for black color</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>0</widget>
-                            </depends>
-                        </window_color>
-
-                        <!-- Window new Widget -->
+                        <!-- The API by Zopim doesn't work correctly (at the moment) -->
                         <window_size>
                             <label>Size</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_windowsize</source_model>
-                            <comment>Set the size of the chat window. Allowed values: small, medium, large.</comment>
-                            <sort_order>140</sort_order>
+                            <comment><![CDATA[Set the size of the chat window. Allowed values: small, medium, large. <strong>ATTENTION</strong>: may not work correctly with the new Widget until Zopim fix his API.]]></comment>
+                            <sort_order>70</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <widget_api>new</widget_api>
                             </depends>
                         </window_size>
+                        <!-- The API by Zopim doesn't work correctly (at the moment) -->
                         <window_position>
                             <label>Window position</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_windowposition</source_model>
-                            <comment>Set position of the chat window.</comment>
-                            <sort_order>150</sort_order>
+                            <comment><![CDATA[Set position of the chat window. <strong>ATTENTION</strong>: may not work correctly with the new widget until Zopim fix his API.]]></comment>
+                            <sort_order>80</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>1</widget>
-                            </depends>
                         </window_position>
                         <window_offset_horizontal>
                             <label>Horizontal Offset</label>
                             <frontend_type>text</frontend_type>
                             <comment>Set the horizontal offset value (integer only) of the chat window from the edge of the browser window.</comment>
-                            <sort_order>160</sort_order>
+                            <sort_order>90</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <widget_api>new</widget_api>
                             </depends>
                         </window_offset_horizontal>
                         <window_offset_vertical>
                             <label>Vertical Offset</label>
                             <frontend_type>text</frontend_type>
                             <comment>Set the vertical offset value (integer only) of the chat window from the edge of the browser window.</comment>
-                            <sort_order>170</sort_order>
+                            <sort_order>100</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <widget_api>new</widget_api>
                             </depends>
                         </window_offset_vertical>
                         <window_onshow>
                             <label>On Show Callback</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>180</sort_order>
+                            <sort_order>110</sort_order>
                             <comment>Javascript function name callback which will be fired when showing the window. Note: the callback will not be fired if the chat window was shown using an API call.</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <widget_api>new</widget_api>
                             </depends>
                         </window_onshow>
                         <window_onhide>
                             <label>On Hide Callback</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>190</sort_order>
+                            <sort_order>120</sort_order>
                             <comment>Javascript function name callback which will be fired when hiding the window. Note: the callback will not be fired if the chat window was hidden using an API call.</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <widget_api>new</widget_api>
                             </depends>
                         </window_onhide>
 
@@ -478,65 +460,17 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </button_show>
+                        <!-- The API by Zopim doesn't work correctly (at the moment) -->
                         <button_position>
                             <label>Position</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_buttonposition</source_model>
+                            <comment><![CDATA[<strong>ATTENTION</strong>: may not work correctly with the new widget until Zopim fix his API.]]></comment>
                             <sort_order>220</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </button_position>
-                        <button_hidewhenoffline>
-                            <label>Hide when offline</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <comment>This prevents visitors from sending you offline messages</comment>
-                            <sort_order>230</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </button_hidewhenoffline>
-
-                        <!-- Button Classic Widget -->
-                        <button_offset_bottom>
-                            <label>Offset of the button</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>240</sort_order>
-                            <comment>Adds additional spacing below the button</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>0</widget>
-                            </depends>
-                        </button_offset_bottom>
-
-                        <!-- Button New Widget -->
-                        <button_offset_horizontal>
-                            <label>Horizontal offset</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>250</sort_order>
-                            <comment><![CDATA[Set the horizontal offset of the chat button from the edge of the browser window. Distance from the edge of the browser window, in pixels (number)]]></comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>1</widget>
-                            </depends>
-                        </button_offset_horizontal>
-                        <button_offset_vertical>
-                            <label>Vertical offset</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>260</sort_order>
-                            <comment><![CDATA[Set the vertical offset of the chat button from the edge of the browser window. Distance from the edge of the browser window, in pixels (number)]]></comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>1</widget>
-                            </depends>
-                        </button_offset_vertical>
                         <button_position_mobile>
                             <label>Position on mobile devices</label>
                             <frontend_type>select</frontend_type>
@@ -547,21 +481,52 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <widget_api>new</widget_api>
                             </depends>
                         </button_position_mobile>
+                        <button_hidewhenoffline>
+                            <label>Hide when offline</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment>This prevents visitors from sending you offline messages</comment>
+                            <sort_order>230</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button_hidewhenoffline>
+                        <button_offset_horizontal>
+                            <label>Horizontal offset</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>250</sort_order>
+                            <comment><![CDATA[Set the horizontal offset of the chat button from the edge of the browser window. Distance from the edge of the browser window, in pixels (number)]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <widget_api>new</widget_api>
+                            </depends>
+                        </button_offset_horizontal>
+                        <button_offset_vertical>
+                            <label>Vertical offset</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>260</sort_order>
+                            <comment><![CDATA[Set the vertical offset of the chat button from the edge of the browser window. Distance from the edge of the browser window, in pixels (number)]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button_offset_vertical>
 
                         <!-- Cookie Law Config -->
 
                         <cookielaw_config>
-                            <label>Cookie Law Configuration (New Widget only)</label>
+                            <label>Cookie Law Configuration</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
                             <sort_order>270</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <widget_api>new</widget_api>
                             </depends>
                         </cookielaw_config>
                         <cookielaw_comply>
@@ -574,7 +539,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <widget_api>new</widget_api>
                             </depends>
                         </cookielaw_comply>
                         <cookielaw_consent>
@@ -587,7 +552,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
+                                <widget_api>new</widget_api>
                                 <cookielaw_comply>1</cookielaw_comply>
                             </depends>
                         </cookielaw_consent>
@@ -595,15 +560,14 @@
                         <!-- Concierge Config -->
 
                         <concierge_config>
-                            <label>Concierge Configuration (New Widget and Simple Theme only)</label>
+                            <label>Concierge Configuration</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
                             <sort_order>300</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
+                                <window_type>simple</window_type>
                             </depends>
                         </concierge_config>
                         <concierge_avatar>
@@ -618,8 +582,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
+                                <window_type>simple</window_type>
                             </depends>
                         </concierge_avatar>
                         <concierge_name>
@@ -631,8 +594,7 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
+                                <window_type>simple</window_type>
                             </depends>
                         </concierge_name>
                         <concierge_title>
@@ -644,86 +606,127 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
+                                <window_type>simple</window_type>
                             </depends>
                         </concierge_title>
 
                         <!-- Badge Config-->
 
                         <badge_config>
-                            <label>Badge Configuration (New Widget and Simple Theme only)</label>
+                            <label>Badge Configuration</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
                             <sort_order>340</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
+                                <window_type>simple</window_type>
                             </depends>
                         </badge_config>
-
                         <badge_show>
                             <label>Show Badge</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_showorhide</source_model>
                             <comment>Show or hide the badge automatically when the widget is loaded.</comment>
-                            <sort_order>380</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
-                            </depends>
-                        </badge_show>
-
-                        <badge_layout>
-                            <label>Layout</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>chat/config_source_layout</source_model>
-                            <comment>Set the layout of the chat badge. Image right (Image on right, text on left), Image left (Image on left, text on right), Image only, Text only</comment>
                             <sort_order>350</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
+                                <window_type>simple</window_type>
+                            </depends>
+                        </badge_show>
+                        <badge_layout>
+                            <label>Layout</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_layout</source_model>
+                            <comment>Set the layout of the chat badge. Image right (Image on right, text on left), Image left (Image on left, text on right), Image only, Text only</comment>
+                            <sort_order>360</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <window_type>simple</window_type>
                             </depends>
                         </badge_layout>
-
                         <badge_image>
                             <label>Image</label>
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">chat</upload_dir>
                             <base_url type="media" scope_info="1">chat</base_url>
-                            <sort_order>360</sort_order>
+                            <sort_order>370</sort_order>
                             <comment>No effect if the badge layout is text only</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
+                                <window_type>simple</window_type>
                             </depends>
                         </badge_image>
-
                         <badge_text>
                             <label>Text</label>
                             <frontend_type>text</frontend_type>
-                            <sort_order>370</sort_order>
+                            <sort_order>380</sort_order>
                             <comment>No effect if the layout of the badge is Image Only</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
-                                <widget>1</widget>
-                                <theme_themes>simple</theme_themes>
+                                <window_type>simple</window_type>
                             </depends>
                         </badge_text>
+
+                        <!-- Bubble Config -->
+
+                        <bubble_config>
+                            <label>Bubble Configuration (Classic theme only)</label>
+                            <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
+                            <sort_order>400</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <window_type>classic</window_type>
+                            </depends>
+                        </bubble_config>
+                        <bubble_show>
+                            <label>Show the Bubble</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_showorhide</source_model>
+                            <sort_order>410</sort_order>
+                            <comment>Show: If the user hides or has hidden the chat bubble, it will remain hidden on subsequent page loads until the current session expires, or the reset API function is called.</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <window_type>classic</window_type>
+                            </depends>
+                        </bubble_show>
+                        <bubble_title>
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>420</sort_order>
+                            <comment>Set the title displayed on the chat bubble.</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <window_type>classic</window_type>
+                            </depends>
+                        </bubble_title>
+                        <bubble_text>
+                            <label>Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>430</sort_order>
+                            <comment>Set the text displayed on the chat bubble.</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <window_type>classic</window_type>
+                            </depends>
+                        </bubble_text>
                     </fields>
                 </widgetconfig>
 
