@@ -26,7 +26,47 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
     {
         $this->_config = Mage::getStoreConfig('chat');
     }
-    
+
+    public function getCurrentPageURL()
+    {
+        $pageURL = 'http';
+        if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+        $pageURL .= "://";
+        if ($_SERVER["SERVER_PORT"] != "80") {
+            $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+        } else {
+            $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+        }
+
+        $pageURL = preg_replace("/\?.*$/", "", $pageURL);
+
+        return $pageURL;
+    }
+
+    public function doPostRequest($url, $_data, $useSSL)
+    {
+        if ($useSSL != "zopimUseSSL") {
+            $url = str_replace("https", "http", $url);
+        }
+
+        $data = array();
+        while(list($n,$v) = each($_data)){
+            $data[] = urlencode($n)."=".urlencode($v);
+        }
+        $data = implode('&', $data);
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        return $response;
+    }
+
     /**
      * @param array $url
      * @return array

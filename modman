@@ -1,5 +1,6 @@
 src/app/code/community/Diglin/Chat app/code/community/Diglin/Chat
+src/app/design/adminhtml/default/default/layout/chat.xml app/design/adminhtml/default/default/layout/chat.xml
+src/app/design/adminhtml/default/default/template/chat app/design/adminhtml/default/default/template/chat
 src/app/design/frontend/base/default/layout/chat.xml app/design/frontend/base/default/layout/chat.xml
 src/app/design/frontend/base/default/template/chat app/design/frontend/base/default/template/chat
 src/app/etc/modules/Diglin_Chat.xml app/etc/modules/Diglin_Chat.xml
-src/media/chat media/chat

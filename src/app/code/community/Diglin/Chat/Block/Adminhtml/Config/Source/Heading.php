@@ -31,7 +31,6 @@ class Diglin_Chat_Block_Adminhtml_Config_Source_Heading
      */
     public function render(Varien_Data_Form_Element_Abstract $element)
     {
-        $useContainerId = $element->getData('use_container_id');
         return sprintf('<tr class="system-fieldset-sub-head" id="row_%s"><td colspan="5"><h4>%s</h4><input type="hidden" id="%s" name="depends-input" title="depends-input"/></td></tr>',
             $element->getHtmlId(), $element->getLabel(), $element->getHtmlId()
         );

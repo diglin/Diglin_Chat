@@ -18,17 +18,4 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_AdminController extends Mage_Adminhtml_Controller_Action
-{
-    public function dashboardAction()
-    {
-        $this->loadLayout()
-            ->_addContent($this->getLayout()->createBlock('chat/dashboard'))
-            ->renderLayout();
-    }
-
-    public function indexAction()
-    {
-        $this->dashboardAction();
-    }
-}
+class Diglin_Chat_Block_Adminhtml_Account extends Mage_Core_Block_Template {}

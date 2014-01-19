@@ -21,17 +21,28 @@
 -->
 <config>
     <menu>
-        <customer translate="title" module="customer">
+        <chat translate="title" module="chat">
+            <title>Zopim Live Chat</title>
+            <sort_order>1000</sort_order>
             <children>
                 <dashboard translate="title" module="chat">
-                    <title>Zopim Dashboard</title>
-                    <action>chat/admin/dashboard</action>
-                    <sort_order>50</sort_order>
+                    <title>Dashboard</title>
+                    <action>chat/index/dashboard</action>
+                    <sort_order>10</sort_order>
                 </dashboard>
+                <account translate="title" module="chat">
+                    <title>Account Setup</title>
+                    <action>chat/index/account</action>
+                    <sort_order>20</sort_order>
+                </account>
+                <config>
+                    <title>Configuration</title>
+                    <action>adminhtml/system_config/edit/section/chat</action>
+                    <sort_order>30</sort_order>
+                </config>
             </children>
-        </customer>
+        </chat>
     </menu>
-
     <acl>
         <resources>
             <all>
@@ -39,24 +50,28 @@
             </all>
             <admin>
                 <children>
-                    <customer>
-                        <children>
-                            <dashboard translate="title">
-                                <title>Dashboard Zopim by diglin</title>
-                            </dashboard>
-                        </children>
-                    </customer>
                     <system>
                         <children>
                             <config>
                                 <children>
-                                    <chat translate="title">
+                                    <chat translate="title" moduel="chat">
                                         <title>Zopim Chat by diglin</title>
                                     </chat>
                                 </children>
                             </config>
                         </children>
                     </system>
+                    <chat translate="title" module="chat">
+                        <title>Zopim Live Chat by Diglin GmbH</title>
+                        <children>
+                            <dashboard translate="title" module="chat">
+                                <title>Dashboard</title>
+                            </dashboard>
+                            <account translate="title" module="chat">
+                                <title>Account Setup</title>
+                            </account>
+                        </children>
+                    </chat>
                 </children>
             </admin>
         </resources>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 /**
  * Diglin
@@ -19,10 +19,22 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 -->
-<layout version="0.1.1">
+<layout>
     <adminhtml_system_config_edit>
         <reference name="head">
             <action method="addJs"><file>jscolor/jscolor.js</file></action>
         </reference>
     </adminhtml_system_config_edit>
+
+    <chat_index_dashboard>
+        <reference name="content">
+            <block type="chat/adminhtml_dashboard" name="chat_dashboard" as="chat.dashboard" template="chat/dashboard.phtml" />
+        </reference>
+    </chat_index_dashboard>
+
+    <chat_index_account>
+        <reference name="content">
+            <block type="chat/adminhtml_account" name="chat_account" as="chat.account" template="chat/account.phtml" />
+        </reference>
+    </chat_index_account>
 </layout>

@@ -41,6 +41,11 @@
                 <allow_email>1</allow_email>
                 <widget>classic</widget>
                 <disable_sound>0</disable_sound>
+                <!-- values used internally, keep it here as references -->
+                <use_ssl>1</use_ssl>
+                <salt></salt>
+                <key></key>
+                <username></username>
             </chatconfig>
 
             <widgetconfig>
@@ -106,7 +111,7 @@
 
     <frontend>
         <layout>
-            <updates module="Diglin_Chat">
+            <updates module="chat">
                 <chat>
                     <file>chat.xml</file>
                 </chat>
@@ -117,7 +122,7 @@
     <adminhtml>
         <layout>
             <updates>
-                <chat module="Diglin_Chat">
+                <chat module="chat">
                     <file>chat.xml</file>
                 </chat>
             </updates>
@@ -126,13 +131,13 @@
 
     <admin>
        <routers>
-            <Diglin_Chat>
+            <chat>
                 <use>admin</use>
                 <args>
-                    <module>Diglin_Chat</module>
+                    <module>Diglin_Chat_Adminhtml</module>
                     <frontName>chat</frontName>
                 </args>
-            </Diglin_Chat>
+            </chat>
        </routers>
     </admin>    
 </config>

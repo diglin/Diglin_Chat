@@ -92,11 +92,13 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
     }
 
     /**
+     *
+     * @param string $type
      * @return \Diglin_Chat_Helper_Data
      */
-    public function getHelper()
+    public function getHelper($type = 'chat')
     {
-        return Mage::helper('chat');
+        return Mage::helper($type);
     }
 
     /**

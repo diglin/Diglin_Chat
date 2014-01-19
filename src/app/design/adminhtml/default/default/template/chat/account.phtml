@@ -1,0 +1,229 @@
+<?php
+/**
+ * Diglin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    Diglin
+ * @package     Diglin_Chat
+ * @copyright   Copyright (c) 2011-2014 Diglin (http://www.diglin.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+
+/* @var $this Diglin_Chat_Block_Adminhtml_Account */
+if ($this->getIsAuthenticated()) {
+?>
+<div class="content-header" style="visibility: visible;">
+    <h3 class="icon-head head-categories" style="background-image: url(https://zopim.com/assets/branding/zopim.com/chatman/online.png")><?php echo $this->__('Account Configuration'); ?></h3>
+</div>
+<div id="existingform">
+    <div>
+        <div class="entry-edit">
+            <div class="entry-edit-head">
+                <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Successfully connected to Zopim'); ?></h4>
+            </div>
+            <div id="sales_report_base_fieldset" class="fieldset ">
+                <div class="hor-scroll">
+                    <br>
+                    <span style="float:right; line-height: 40px"><a href="<?php echo Mage::helper('chat')->getCurrentPageUrl(); ?>'?deactivate=yes"><?php echo $this->__('Deactivate'); ?></a></span>
+
+                    <div class="fieldset-legend" style="display: inline; line-height: 40px"><?php echo $this->__('Currently Activated Account %s', $this->getUsername()); ?></div>
+
+                    <div style="display:inline-block;background:#444;color:#fff;font-size:10px;text-transform:uppercase;padding:3px 8px;-moz-border-radius:5px;-webkit-border-radius:5px;">
+                        <?php echo $this->getAccountDetails(); ?>
+                    </div>
+                    <p><?php echo $this->__('You may now proceed to the dashboard to chat with customers or customize your widget through the menu.'); ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php } else { ?>
+<div class="content-header" style="visibility: visible;">
+    <h3 class="icon-head head-categories" style="background-image: url(http://zopim.com/assets/branding/zopim.com/chatman/online.png)"><?php echo $this->__('Account Configuration'); ?></h3>
+    <p class="content-buttons form-buttons">
+        <span id="btn_new">
+            <button onclick="document.getElementById('login_form').submit()" class="scalable save" type="button" id="id_0b860228d9b3c83ba14a7ae8fed1a587">
+                <span><?php echo $this->__('Link Up'); ?></span>
+            </button>
+        </span>
+        <span id="btn_link">
+            <button style="" onclick="checkSignUp()" class="scalable save" type="button" id="id_0b860228d9b3c83ba14a7ae8fed1a587">
+                <span><?php echo $this->__('Sign Up'); ?></span>
+            </button>
+        </span>
+    </p>
+</div>
+    <div id="messagesbox" style="display: none"><ul class="messages"><li class="error-msg"><ul><li><div id="themessage"></div></li></ul></li></ul><br></div>
+    <table cellspacing="0">
+    <tr>
+        <td class="page">
+            <b>Select A Setup</b>
+            <div style="padding:10px; display: inline;">
+                <div style="padding:5px 0;cursor:pointer;vertical-align:middle;" onclick="javascript:showSignup(1)">
+                    <input type="radio" name="formtoshow" class="input-text page" id="formtoshow_signup" value="yes" onchange="javascript:showSignup(1)"/>&nbsp;<?php echo $this->__('Give me a new account &mdash; <i>absolutely free!</i>'); ?>
+                </div>
+                <div style="padding:5px 0;cursor:pointer;" onclick="javascript:showSignup(0)">
+                    <input type="radio" name="formtoshow" class="input-text page" id="formtoshow_existing" value="no" onchange="javascript:showSignup(0)"/>&nbsp;<?php echo $this->__('I already have a Zopim account'); ?>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+<div id="existingform" style="display: none">
+    <div>
+        <div class="entry-edit">
+            <form method="get" action="<?php echo Mage::helper('chat')->getCurrentPageUrl(); ?>" id="login_form">
+                <div class="entry-edit-head">
+                    <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Link up to your zopim account'); ?></h4>
+                    <div class="form-buttons"></div>
+                </div>
+                <div id="sales_report_base_fieldset" class="fieldset ">
+                    <div class="hor-scroll">
+                        <table cellspacing="0" class="form-list">
+                            <tbody>
+                            <tr>
+                                <td class="hidden" colspan="2"><input type="hidden" value="" name="store_ids" id="sales_report_store_ids"></td>
+                            </tr>
+                            <tr>
+                                <td class="label" style="width:180px;"><?php echo $this->__('Zopim username (e-mail)'); ?></td>
+                                <td class="value"><input class=" input" style="width:200px;padding:2px;" type="text" name="zopimusername" value="<?php echo $this->getUsername(); ?>" /></td>
+                            </tr>
+                            <tr>
+                                <td class="label" style="width:180px;"><?php echo $this->__('Zopim password'); ?></td>
+                                <td class="value"><input class=" input" style="width:200px;padding:2px;" type="password" name="zopimpassword" /></td>
+                            </tr>
+                            <tr>
+                                <td class="label" style="width:180px;"><?php echo $this->__('Use SSL'); ?></td>
+                                <td class="value"><input type="checkbox" name="zopimusessl" value="zopimusessl" checked><?php echo $this->__('Uncheck this if you are unable to login'); ?></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div align="right">
+                    <button style="" onclick="document.getElementById('login_form').submit()" class="scalable save" type="button" id="id_0b860228d9b3c83ba14a7ae8fed1a587">
+                        <span><?php echo $this->__('Link Up'); ?></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="signupform" style="display: none;">
+    <div>
+        <div class="entry-edit">
+            <form method="GET" action="<?php echo Mage::helper('chat')->getCurrentPageUrl(); ?>" id="signup_form"><div></div><div class="entry-edit-head">
+                    <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->__('Activate your free Zopim Account'); ?></h4>
+                    <div class="form-buttons"></div>
+                </div>
+                <div id="sales_report_base_fieldset" class="fieldset ">
+                    <div class="hor-scroll">
+                        <table cellspacing="0" class="form-list">
+                            <tbody>
+                            <tr>
+                                <td class="hidden" colspan="2"><input type="hidden" value="" name="store_ids" id="sales_report_store_ids"></td>
+                            </tr>
+                            <tr>
+                                <td class="label" style="width:180px;"><?php echo $this->__('First Name'); ?></td>
+                                <td class="value"><input class=" input" style="width:200px;padding:2px;" type="text" name="zopimfirstname" id="zopimfirstname" value="<?php echo $this->getRequest()->getParam('zopimfirstname'); ?>" /></td>
+                            </tr>
+                            <tr>
+                                <td class="label" style="width:180px;"><?php echo $this->__('Last Name'); ?></td>
+                                <td class="value"><input class=" input" style="width:200px;padding:2px;" type="text" name="zopimlastname" id="zopimlastname" value="<?php echo $this->getRequest()->getParam('zopimlastname'); ?>" /></td>
+                            </tr>
+                            <tr>
+                                <td class="label" style="width:180px;"><?php echo $this->__('E-mail'); ?></td>
+                                <td class="value"><input class=" input" style="width:200px;padding:2px;" type="text" id="zopimnewemail" name="zopimnewemail" value="<?php echo $this->getRequest()->getParam('zopimnewemail'); ?>" /></td>
+                            </tr>
+                            <tr>
+                                <td class="label" style="width:180px;"><?php echo $this->__('Use SSL'); ?></td>
+                                <td class="value"><input type="checkbox" name="zopimUseSSL" value="zopimUseSSL" checked><?php echo $this->__('Uncheck this if you are unable to login'); ?></td>
+                            </tr>
+                            <tr>
+                                <td class="label" style="width:180px;"><?php echo $this->__('Verification'); ?></td>
+                                <td class="value">
+                                    <script type="text/javascript" src="https://api-secure.recaptcha.net/challenge?k=6Lfr8AQAAAAAAC7MpRXM2hgLfyss_KKjvcJ_JFIk"></script>
+                                    <noscript>
+                                        <iframe src="https://api-secure.recaptcha.net/noscript?k=6Lfr8AQAAAAAAC7MpRXM2hgLfyss_KKjvcJ_JFIk" height="300" width="500" frameborder="0"></iframe>
+                                        <br>
+                                        <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+                                        <input type="hidden" name="recaptcha_response_field" value="manual_challenge">
+                                    </noscript>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label" style="width:180px;">
+                                </td>
+                                <td class="value"><input type="checkbox" name="zopimagree" id="zopimagree" value="agree" <?php echo $this->getWasChecked(); ?>>
+                                    <?php echo $this->__('I agree to Zopim\'s %s Terms of Service %s & %s Privacy Policy %s', '<a href="http://www.zopim.com/termsnconditions" target="_blank">', '</a>', '<a href="http://www.zopim.com/privacypolicy" target="_blank">', '</a>'); ?>
+                                    <br/><br/>
+                                    <?php echo $this->__('The Zopim live chat bar will be displayed on your shop front once your account is activated.'); ?>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div align="right">
+                    <button onclick="checkSignUp()" class="scalable save" type="button" id="id_0b860228d9b3c83ba14a7ae8fed1a587">
+                        <span><?php echo $this->__('Sign Up'); ?></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    <?php
+        echo $this->getShowSignup();
+    ?>
+
+    function showSignup(whichform) {
+        if (whichform == '1') {
+            document.getElementById('existingform').style.display = "none";
+            document.getElementById('btn_new').style.display = "none";
+            document.getElementById('btn_link').style.display = "inline";
+            document.getElementById('signupform').style.display = "block";
+            document.getElementById('formtoshow_signup').checked = 'true';
+        } else {
+            document.getElementById('signupform').style.display = "none";
+            document.getElementById('btn_link').style.display = "none";
+            document.getElementById('btn_new').style.display = "inline";
+            document.getElementById('existingform').style.display = "block";
+            document.getElementById('formtoshow_existing').checked = 'true';
+        }
+    }
+
+    function checkSignUp() {
+        var message = 'Oops! ';
+        if (document.getElementById('zopimfirstname').value == '') {
+            message = message + '<?php echo $this->__('First name is required.'); ?>' + '<br>';
+        }
+        if (document.getElementById('zopimlastname').value == '') {
+            message = message + '<?php echo $this->__('Last name is required.'); ?>' + '<br>';
+        }
+        if (document.getElementById('zopimnewemail').value == '') {
+            message = message + '<?php echo $this->__('Your email is required.'); ?>' + '<br>';
+        }
+        if (document.getElementById('zopimagree').checked == '') {
+            message = message + '<?php echo $this->__('You must agree to our Terms of Service to continue.'); ?>' + '<br>';
+        }
+        if (message != 'Oops! ') {
+            document.getElementById('messagesbox').style.display = 'block';
+            document.getElementById('themessage').innerHTML = message;
+            return false;
+        }
+        document.getElementById('signup_form').submit();
+        return true;
+    }
+</script>
+<?php } ?>

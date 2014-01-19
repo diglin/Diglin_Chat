@@ -27,15 +27,16 @@
 -->
 <config>
     <tabs>
-        <diglin>
-            <label>Diglin</label>
+        <diglin translate="label">
+            <label><![CDATA[<div><img alt="Diglin" title="Diglin" width="66" height="23" style="display:block;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAXCAYAAAC/F5msAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2QjlDMEY2NTc5NkUxMUUzQTk3RUQ4RTMwOTcyMzZFOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2QjlDMEY2Njc5NkUxMUUzQTk3RUQ4RTMwOTcyMzZFOSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjZCOUMwRjYzNzk2RTExRTNBOTdFRDhFMzA5NzIzNkU5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjZCOUMwRjY0Nzk2RTExRTNBOTdFRDhFMzA5NzIzNkU5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yStvXwAAApxJREFUeNrsWF1OwkAQ3hoeNekNrCewr/oiPQHlBvQGeALhBOAJ4AbgCYAnX3sDewRMfK8z5Fsz2exPrYCmcZIBWnZ+9tv5a6O6rtU/KdXjjyiKDheXd3d9+hoQJ8Q74uXH6+u+ixs3AyDiGwwEgTCi64WxviTOugiGCcSF+D2zrE/5PoEUdz01DhFxdX/PKbFxrNkSV8SPbSODgGTdbGNLOrK2zpKeifaJ9GxPERGVR4bTI2eg/kBkPIH7x1Z8AILQrXDyJs2JuXbESJNNV9OkJ34PkR6pBQRZM1ZcQD3hy+vHxA84ucrQwWtm2o5OFSE3wH8leIqDctlLRX3j9C2hKxcdMIUfrO/ZllZfQHD+k4IMYGwtIGjqs3E26ABBgqngiK0Im+FtyqXgnPTeeOpTLHRpf1cW/QmY9fGhr11dQ8FY4QFBGQZNGonNLBE5GU7CVwSlHB/CVDgaQ28bqqCrQIQ7O2TPEmabAAjKs7GBdoBALYTeULfRcrxuqE+f5OoA8EEgSNdE+KGQfom1WH4ThGkgTENdyCdXnnh4e/d2DZFXIRCWEuEu0YWIhqQBCEVgzd5TIJtQ8qtAiA34akKTkN3pDRG4Y/EglwbsvAi5FctAzkW3pxyoXAVwjpMak3OLgL652OwMxU7WnWdXtAn7OWQ2jnFfoQXWAbBaRYRCi9l7JstDe/SBgUKXWaZUBrpwPR8IuSlk945J97FFIW7+0CXeR8jOMffME2s4FdsGKzFcpW07AclzFL6JTjUx/nPa/tH7CKONLoB8/sPi+Z2N667FdeYak6EunjxbrM/1PkKHaYk0UecCwRiVnxCJGoT1sUEIpkaD54ZTgaDH7AcBAEfkjmwtz/qqzpPnM+HcrisDlRWIf1LqU4ABALewLXRXQ1aPAAAAAElFTkSuQmCC">
+</div>]]></label>
             <sort_order>400</sort_order>
         </diglin>
     </tabs>
     
     <sections>
         <chat module="chat">
-            <label>Zopim Chat</label>
+            <label>Zopim Live Chat</label>
             <tab>diglin</tab>
             <frontend_type>text</frontend_type>
             <sort_order>110</sort_order>
@@ -57,7 +58,7 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <comment><![CDATA[<a href="https://www.zopim.com/signup/trial?eref=diglin" target="_blank" title="Go to Zopim Website">Sign Up to Zopim to get a key</a>]]></comment>
+                    <comment><![CDATA[<a href="http://bit.ly/1kcTNL5" target="_blank" title="Go to Zopim Website">Sign Up to Zopim to get a key</a>]]></comment>
                     <fields>
                         <enabled>
                             <label>Enabled</label>
@@ -147,7 +148,7 @@
                     <depends>
                         <widget_api>1</widget_api>
                     </depends>
-                    <comment><![CDATA[<ul><li>- <strong>IMPORTANT</strong>: If you have the lite plan, not all features will be functional like widget customization (e.g. color). <a href="/chat/admin/dashboard">Check the plan</a> you have.</li><li>- The chat bubble is only available when using the classic theme in other cases, all bubble configuration will have no effect.</li></ul>]]></comment>
+                    <comment><![CDATA[<ul><li>- <strong>IMPORTANT</strong>: If you have the lite plan, not all features will be functional like widget customization (e.g. color). Check the plan you have in the menu Zopim Live Chat > Account Set Up.</li><li>- The chat bubble is only available when using the classic theme in other cases, all bubble configuration will have no effect.</li></ul>]]></comment>
                     <fields>
                         <general_config>
                             <label>General Config</label>

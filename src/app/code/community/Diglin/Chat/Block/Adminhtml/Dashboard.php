@@ -18,18 +18,12 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Block_Adminhtml_Config_Source_Hint
-    extends Mage_Adminhtml_Block_Abstract
-    implements Varien_Data_Form_Element_Renderer_Interface
+class Diglin_Chat_Block_Adminhtml_Dashboard extends Mage_Core_Block_Template
 {
-    /**
-     * Render fieldset html
-     *
-     * @param Varien_Data_Form_Element_Abstract $element
-     * @return string
-     */
-    public function render(Varien_Data_Form_Element_Abstract $element)
+    const ZOPIM_DASHBOARD_URL = 'https://dashboard.zopim.com/';
+
+    public function getUsername()
     {
-        return '<p><strong>Diglin_Chat Version: '. Mage::getConfig()->getModuleConfig('Diglin_Chat')->version .'</strong></p>';
+        return Mage::getStoreConfig('chat/chatconfig/username');
     }
 }
