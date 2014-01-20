@@ -18,7 +18,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Model_Config_Source_ButtonPosition
+class Diglin_Chat_Model_Config_Source_Classicthemes
 {
     /**
      * Options getter
@@ -28,12 +28,14 @@ class Diglin_Chat_Model_Config_Source_ButtonPosition
     public function toOptionArray()
     {
         return array(
-            array('value' => 'bl', 'label' => Mage::helper('chat')->__('Bottom Left')),
-            array('value' => 'bm', 'label' => Mage::helper('chat')->__('Bottom Middle (New widget only)')),
-            array('value' => 'br', 'label' => Mage::helper('chat')->__('Bottom Right')),
-            array('value' => 'tl', 'label' => Mage::helper('chat')->__('Top Left (New widget only)')),
-            array('value' => 'tm', 'label' => Mage::helper('chat')->__('Top Middle (New widget only)')),
-            array('value' => 'tr', 'label' => Mage::helper('chat')->__('Top Right (New widget only)')),
+            array('value' => '', 'label' => Mage::helper('chat')->__('-- Please Select (Some depends on your plan) --')),
+            array('value' => 'alphacube', 'label' => Mage::helper('chat')->__('Alphacube')),
+            array('value' => 'plastic', 'label' => Mage::helper('chat')->__('Plastic')),
+            array('value' => 'solid', 'label' => Mage::helper('chat')->__('Solid')),
+            array('value' => 'floral', 'label' => Mage::helper('chat')->__('Floral')),
+            array('value' => 'windows7', 'label' => Mage::helper('chat')->__('Windows 7')),
+            array('value' => 'macOs', 'label' => Mage::helper('chat')->__('MacOs')),
+            array('value' => 'chrome', 'label' => Mage::helper('chat')->__('Chrome')),
         );
     }
 }

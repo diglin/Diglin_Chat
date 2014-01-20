@@ -18,7 +18,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Model_Config_Source_WindowPosition
+class Diglin_Chat_Model_Config_Source_Windowposition
 {
     /**
      * Options getter

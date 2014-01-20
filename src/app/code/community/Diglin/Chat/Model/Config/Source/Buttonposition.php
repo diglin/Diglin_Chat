@@ -18,9 +18,8 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Model_Config_Source_MobilePosition
+class Diglin_Chat_Model_Config_Source_Buttonposition
 {
-
     /**
      * Options getter
      *
@@ -30,8 +29,11 @@ class Diglin_Chat_Model_Config_Source_MobilePosition
     {
         return array(
             array('value' => 'bl', 'label' => Mage::helper('chat')->__('Bottom Left')),
+            array('value' => 'bm', 'label' => Mage::helper('chat')->__('Bottom Middle (New widget only)')),
             array('value' => 'br', 'label' => Mage::helper('chat')->__('Bottom Right')),
+            array('value' => 'tl', 'label' => Mage::helper('chat')->__('Top Left (New widget only)')),
+            array('value' => 'tm', 'label' => Mage::helper('chat')->__('Top Middle (New widget only)')),
+            array('value' => 'tr', 'label' => Mage::helper('chat')->__('Top Right (New widget only)')),
         );
     }
-
 }
