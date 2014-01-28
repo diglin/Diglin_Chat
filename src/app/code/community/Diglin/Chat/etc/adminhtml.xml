@@ -26,7 +26,7 @@
             <sort_order>1000</sort_order>
             <children>
                 <dashboard translate="title" module="chat">
-                    <title>Dashboard</title>
+                    <title>Zopim Dashboard</title>
                     <action>chat/index/dashboard</action>
                     <sort_order>10</sort_order>
                 </dashboard>
@@ -70,6 +70,9 @@
                             <account translate="title" module="chat">
                                 <title>Account Setup</title>
                             </account>
+                            <config translate="title" module="chat">
+                                <title>Configuration</title>
+                            </config>
                         </children>
                     </chat>
                 </children>

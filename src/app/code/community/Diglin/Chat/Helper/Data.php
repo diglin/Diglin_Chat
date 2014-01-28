@@ -20,6 +20,16 @@
 
 class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
 {
+    const ZOPIM_BASE_URL = 'https://www.zopim.com/';
+
+    const ZOPIM_LOGIN_URL = 'https://www.zopim.com/plugins/login';
+
+    const ZOPIM_SIGNUP_URL = 'https://www.zopim.com/plugins/createTrialAccount';
+
+    const ZOPIM_GETACCOUNTDETAILS_URL = 'https://www.zopim.com/plugins/getAccountDetails';
+
+    const ZOPIM_DASHBOARD_URL = 'https://dashboard.zopim.com';
+
     private $_config;
     
     public function __construct ()
@@ -119,80 +129,100 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
 
     /* Greetings Config */
 
-    public function getOnlineGreetingShort ()
+    public function getOnlineMessage ()
     {
         // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/chatconfig/online_greeting_short') && !Mage::getStoreConfig('chat/widgetconfig/online_greeting_short')) {
+        if (Mage::getStoreConfig('chat/chatconfig/online_greeting_short') && !Mage::getStoreConfig('chat/widgetconfig/online_message')) {
             return Mage::getStoreConfig('chat/chatconfig/online_greeting_short');
         }
-        return Mage::getStoreConfig('chat/widgetconfig/online_greeting_short');
+        return Mage::getStoreConfig('chat/widgetconfig/online_message');
     }
 
-    public function getOfflineGreetingShort ()
+    public function getOfflineMessage ()
     {
         // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/chatconfig/offline_greeting_short') && !Mage::getStoreConfig('chat/widgetconfig/offline_greeting_short')) {
+        if (Mage::getStoreConfig('chat/chatconfig/offline_greeting_short') && !Mage::getStoreConfig('chat/widgetconfig/offline_message')) {
             return Mage::getStoreConfig('chat/chatconfig/offline_greeting_short');
         }
-        return Mage::getStoreConfig('chat/widgetconfig/offline_greeting_short');
+        return Mage::getStoreConfig('chat/widgetconfig/offline_message');
     }
 
-    public function getAwayGreetingShort ()
+    public function getOfflineGreeting ()
     {
         // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/chatconfig/away_greeting_short') && !Mage::getStoreConfig('chat/widgetconfig/away_greeting_short')) {
+        if (Mage::getStoreConfig('chat/chatconfig/away_greeting_short') && !Mage::getStoreConfig('chat/widgetconfig/offline_greeting')) {
             return Mage::getStoreConfig('chat/chatconfig/away_greeting_short');
         }
-        return Mage::getStoreConfig('chat/widgetconfig/away_greeting_short');
+        return Mage::getStoreConfig('chat/widgetconfig/offline_greeting');
     }
 
-    public function getOnlineGreetingLong ()
-    {
-        // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/chatconfig/online_greeting_long') && !Mage::getStoreConfig('chat/widgetconfig/online_greeting_long')) {
-            return Mage::getStoreConfig('chat/chatconfig/online_greeting_long');
-        }
-        return Mage::getStoreConfig('chat/widgetconfig/online_greeting_long');
-    }
-
-    public function getOfflineGreetingLong ()
-    {
-        // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/chatconfig/offline_greeting_long') && !Mage::getStoreConfig('chat/widgetconfig/offline_greeting_long')) {
-            return Mage::getStoreConfig('chat/chatconfig/offline_greeting_long');
-        }
-        return Mage::getStoreConfig('chat/widgetconfig/offline_greeting_long');
-    }
-
-    public function getAwayGreetingLong ()
-    {
-        // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/chatconfig/away_greeting_long') && !Mage::getStoreConfig('chat/widgetconfig/away_greeting_long')) {
-            return Mage::getStoreConfig('chat/chatconfig/away_greeting_long');
-        }
-        return Mage::getStoreConfig('chat/widgetconfig/away_greeting_long');
-    }
+//    public function getOnlineGreetingLong ()
+//    {
+//        // Compatibility with version < 2.0.0
+//        if (Mage::getStoreConfig('chat/chatconfig/online_greeting_long') && !Mage::getStoreConfig('chat/widgetconfig/online_greeting_long')) {
+//            return Mage::getStoreConfig('chat/chatconfig/online_greeting_long');
+//        }
+//        return Mage::getStoreConfig('chat/widgetconfig/online_greeting_long');
+//    }
+//
+//    public function getOfflineGreetingLong ()
+//    {
+//        // Compatibility with version < 2.0.0
+//        if (Mage::getStoreConfig('chat/chatconfig/offline_greeting_long') && !Mage::getStoreConfig('chat/widgetconfig/offline_greeting_long')) {
+//            return Mage::getStoreConfig('chat/chatconfig/offline_greeting_long');
+//        }
+//        return Mage::getStoreConfig('chat/widgetconfig/offline_greeting_long');
+//    }
+//
+//    public function getAwayGreetingLong ()
+//    {
+//        // Compatibility with version < 2.0.0
+//        if (Mage::getStoreConfig('chat/chatconfig/away_greeting_long') && !Mage::getStoreConfig('chat/widgetconfig/away_greeting_long')) {
+//            return Mage::getStoreConfig('chat/chatconfig/away_greeting_long');
+//        }
+//        return Mage::getStoreConfig('chat/widgetconfig/away_greeting_long');
+//    }
 
     /* Widget Config */
 
-    public function getWidget ()
+    /**
+     * If the shop owner use the dashboard.zopim.com or Magento config
+     *
+     * @return mixed
+     */
+    public function getConfigType()
     {
-        return Mage::getStoreConfig('chat/widgetconfig/window_type');
+        return Mage::getStoreConfig('chat/widgetconfig/type_config');
     }
 
-    public function getWidgetApi ()
+    /**
+     * Simple or Classic Theme
+     *
+     * @return mixed
+     */
+    public function getWindowTheme ()
     {
-        return Mage::getStoreConfig('chat/widgetconfig/widget_api');
+        return Mage::getStoreConfig('chat/widgetconfig/window_theme');
     }
 
-    public function getUnreadFlag ()
-    {
-        // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/chatconfig/unreadflag') && !Mage::getStoreConfig('chat/widgetconfig/unreadflag')) {
-            return Mage::getStoreConfigFlag('chat/chatconfig/unreadflag');
-        }
-        return Mage::getStoreConfigFlag('chat/widgetconfig/unreadflag');
-    }
+    /**
+     * @deprecated
+     *
+     * @return mixed
+     */
+//    public function getWidgetApi ()
+//    {
+//        return Mage::getStoreConfig('chat/widgetconfig/widget_api');
+//    }
+
+//    public function getUnreadFlag ()
+//    {
+//        // Compatibility with version < 2.0.0
+//        if (Mage::getStoreConfig('chat/chatconfig/unreadflag') && !Mage::getStoreConfig('chat/widgetconfig/unreadflag')) {
+//            return Mage::getStoreConfigFlag('chat/chatconfig/unreadflag');
+//        }
+//        return Mage::getStoreConfigFlag('chat/widgetconfig/unreadflag');
+//    }
 
     /* Bubble Config */
 
@@ -252,34 +282,34 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return $this->getThemePrimaryColor();
     }
 
-    public function getWindowTheme ()
-    {
-        // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/windowconfig/theme') && !Mage::getStoreConfig('chat/widgetconfig/window_theme')) {
-            return Mage::getStoreConfig('chat/windowconfig/theme');
-        }
-        return Mage::getStoreConfig('chat/widgetconfig/window_theme');
-    }
+//    public function getWindowTheme ()
+//    {
+//        // Compatibility with version < 2.0.0
+//        if (Mage::getStoreConfig('chat/windowconfig/theme') && !Mage::getStoreConfig('chat/widgetconfig/window_theme')) {
+//            return Mage::getStoreConfig('chat/windowconfig/theme');
+//        }
+//        return Mage::getStoreConfig('chat/widgetconfig/window_theme');
+//    }
 
     public function getWindowSize ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/window_size');
     }
 
-    public function getWindowPosition ()
-    {
-        return Mage::getStoreConfig('chat/widgetconfig/window_position');
-    }
+//    public function getWindowPosition ()
+//    {
+//        return Mage::getStoreConfig('chat/widgetconfig/window_position');
+//    }
 
-    public function getWindowOffsetHorizontal ()
-    {
-        return (int) Mage::getStoreConfig('chat/widgetconfig/window_offset_horizontal');
-    }
-
-    public function getWindowOffsetVertical ()
-    {
-        return (int) Mage::getStoreConfig('chat/widgetconfig/window_offset_vertical');
-    }
+//    public function getWindowOffsetHorizontal ()
+//    {
+//        return (int) Mage::getStoreConfig('chat/widgetconfig/window_offset_horizontal');
+//    }
+//
+//    public function getWindowOffsetVertical ()
+//    {
+//        return (int) Mage::getStoreConfig('chat/widgetconfig/window_offset_vertical');
+//    }
 
     public function getWindowOnShow()
     {
@@ -309,37 +339,37 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig('chat/widgetconfig/button_position');
     }
 
-    public function getButtonHideOffline ()
-    {
-        // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/buttonconfig/hidewhenoffline') && !Mage::getStoreConfigFlag('chat/widgetconfig/button_hidewhenoffline')) {
-            return Mage::getStoreConfig('chat/buttonconfig/hidewhenoffline');
-        }
-        return Mage::getStoreConfigFlag('chat/widgetconfig/button_hidewhenoffline');
-    }
-
-    public function getButtonOffset ()
-    {
-        if (Mage::getStoreConfig('chat/buttonconfig/offset') && !Mage::getStoreConfig('chat/widgetconfig/button_offset_vertical')) {
-            return Mage::getStoreConfig('chat/buttonconfig/offset');
-        }
-        return $this->getButtonOffsetVertical();
-    }
-
-    public function getButtonOffsetHorizontal ()
-    {
-        return (int) Mage::getStoreConfig('chat/widgetconfig/button_offset_horizontal');
-    }
-
-    public function getButtonOffsetVertical ()
-    {
-        return (int) Mage::getStoreConfig('chat/widgetconfig/button_offset_vertical');
-    }
-
     public function getButtonPositionMobile ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/button_position_mobile');
     }
+
+//    public function getButtonHideOffline ()
+//    {
+//        // Compatibility with version < 2.0.0
+//        if (Mage::getStoreConfig('chat/buttonconfig/hidewhenoffline') && !Mage::getStoreConfigFlag('chat/widgetconfig/button_hidewhenoffline')) {
+//            return Mage::getStoreConfig('chat/buttonconfig/hidewhenoffline');
+//        }
+//        return Mage::getStoreConfigFlag('chat/widgetconfig/button_hidewhenoffline');
+//    }
+
+//    public function getButtonOffset ()
+//    {
+//        if (Mage::getStoreConfig('chat/buttonconfig/offset') && !Mage::getStoreConfig('chat/widgetconfig/button_offset_vertical')) {
+//            return Mage::getStoreConfig('chat/buttonconfig/offset');
+//        }
+//        return $this->getButtonOffsetVertical();
+//    }
+//
+//    public function getButtonOffsetHorizontal ()
+//    {
+//        return (int) Mage::getStoreConfig('chat/widgetconfig/button_offset_horizontal');
+//    }
+//
+//    public function getButtonOffsetVertical ()
+//    {
+//        return (int) Mage::getStoreConfig('chat/widgetconfig/button_offset_vertical');
+//    }
 
     /* Department Config */
 

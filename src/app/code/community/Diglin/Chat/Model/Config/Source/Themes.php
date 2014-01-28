@@ -18,7 +18,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Model_Config_Source_Window
+class Diglin_Chat_Model_Config_Source_Themes
 {
     /**
      * Options getter
@@ -28,8 +28,8 @@ class Diglin_Chat_Model_Config_Source_Window
     public function toOptionArray()
     {
         return array(
-            array('value' => 'classic', 'label' => Mage::helper('chat')->__('Classic')),
             array('value' => 'simple', 'label' => Mage::helper('chat')->__('Simple')),
+            array('value' => 'classic', 'label' => Mage::helper('chat')->__('Classic')),
         );
     }
 }

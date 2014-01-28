@@ -18,7 +18,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Model_Config_Source_Showorhide
+class Diglin_Chat_Model_Config_Source_Simpleadvanced
 {
     /**
      * Options getter
@@ -28,10 +28,9 @@ class Diglin_Chat_Model_Config_Source_Showorhide
     public function toOptionArray()
     {
         return array(
-            array('value' => '', 'label' => Mage::helper('chat')->__('Auto')),
-            array('value' => 'show', 'label' => Mage::helper('chat')->__('Show')),
-            array('value' => 'hide', 'label' => Mage::helper('chat')->__('Hide')),
-//            array('value' => 'reset', 'label' => Mage::helper('chat')->__('reset (Only with new wigdet)')),
+            // we use spl as value to prevent conflict with the simple theme
+            array('value' => 'spl', 'label' => Mage::helper('chat')->__('Simple')),
+            array('value' => 'adv', 'label' => Mage::helper('chat')->__('Advanced')),
         );
     }
 }

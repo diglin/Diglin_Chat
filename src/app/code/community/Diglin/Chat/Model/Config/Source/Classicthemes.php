@@ -23,6 +23,7 @@ class Diglin_Chat_Model_Config_Source_Classicthemes
     /**
      * Options getter
      *
+     * @deprecated
      * @return array
      */
     public function toOptionArray()

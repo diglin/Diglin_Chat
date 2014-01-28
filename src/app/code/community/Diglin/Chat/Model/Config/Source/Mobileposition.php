@@ -20,7 +20,6 @@
 
 class Diglin_Chat_Model_Config_Source_Mobileposition
 {
-
     /**
      * Options getter
      *

@@ -29,11 +29,9 @@ class Diglin_Chat_Model_Config_Source_Buttonposition
     {
         return array(
             array('value' => 'bl', 'label' => Mage::helper('chat')->__('Bottom Left')),
-            array('value' => 'bm', 'label' => Mage::helper('chat')->__('Bottom Middle (New widget only)')),
+            array('value' => 'bm', 'label' => Mage::helper('chat')->__('Bottom Middle')),
             array('value' => 'br', 'label' => Mage::helper('chat')->__('Bottom Right')),
-            array('value' => 'tl', 'label' => Mage::helper('chat')->__('Top Left (New widget only)')),
-            array('value' => 'tm', 'label' => Mage::helper('chat')->__('Top Middle (New widget only)')),
-            array('value' => 'tr', 'label' => Mage::helper('chat')->__('Top Right (New widget only)')),
+            //array('value' => 'tm', 'label' => Mage::helper('chat')->__('Top Middle'))
         );
     }
 }

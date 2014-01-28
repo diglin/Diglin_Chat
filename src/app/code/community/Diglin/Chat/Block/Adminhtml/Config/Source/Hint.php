@@ -30,6 +30,24 @@ class Diglin_Chat_Block_Adminhtml_Config_Source_Hint
      */
     public function render(Varien_Data_Form_Element_Abstract $element)
     {
-        return '<p><strong>Diglin_Chat Version: '. Mage::getConfig()->getModuleConfig('Diglin_Chat')->version .'</strong></p>';
+        $buttonSignUp = $this->getLayout()->createBlock('adminhtml/widget_button')->setData(array(
+            'label'     => $this->__('Sign Up or Login to Zopim'),
+            'onclick'   => "window.open('" . $this->getUrl('chat/index/account') . "', '_self');",
+            'class'     => 'add',
+            'type'      => 'button',
+            'id'        => 'zopim-account',
+        ))
+        ->toHtml();
+
+        $buttonDashboard  = $this->getLayout()->createBlock('adminhtml/widget_button')->setData(array(
+            'label'     => $this->__('Zopim Dashboard'),
+            'onclick'   => "window.open('". Diglin_Chat_Helper_Data::ZOPIM_DASHBOARD_URL ."', '_self');",
+            'class'     => 'go',
+            'type'      => 'button',
+            'id'        => 'zopim-dashboard',
+        ))
+            ->toHtml();
+
+        return '<p>' . $buttonSignUp . '&nbsp;' . $buttonDashboard . ' - <strong>Diglin_Chat Version: '. Mage::getConfig()->getModuleConfig('Diglin_Chat')->version .'</strong></p>';
     }
 }
