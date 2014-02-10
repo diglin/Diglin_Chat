@@ -29,7 +29,7 @@ class Diglin_Chat_Model_Config_Source_Language
     public function toOptionArray()
     {
         return array(
-            array('value' => '', 'label' => Mage::helper('chat')->__('- Auto Detect -')),
+            array('value' => 'auto', 'label' => Mage::helper('chat')->__('- Auto Detect -')),
             array('value' => 'md', 'label' => Mage::helper('chat')->__('- Magento Locale Detection -')),
             array('value' => 'ar', 'label' => Mage::helper('chat')->__("Arabic")),
             array('value' => 'bg', 'label' => Mage::helper('chat')->__("Bulgarian")),

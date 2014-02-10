@@ -51,7 +51,7 @@
             <widgetconfig>
                 <online_message>Click here to chat</online_message>
                 <offline_message>Leave a message</offline_message>
-                <offline_greeting>Click here to chat</offline_greeting>
+                <!--<offline_greeting>We are offline, please let a message</offline_greeting>-->
                 <!--<online_greeting_long>Leave a question or comment and our agents will try to attend to you shortly =)</online_greeting_long>-->
                 <!--<offline_greeting_long>We are offline, but if you leave your message and contact details, we will try to get back to you =)</offline_greeting_long>-->
                 <!--<away_greeting_long>If you leave a question or comment, our agents will be notified and will try to attend to you shortly =)</away_greeting_long>-->
@@ -111,9 +111,9 @@
 
     <frontend>
         <layout>
-            <updates module="chat">
+            <updates>
                 <chat>
-                    <file>chat.xml</file>
+                    <file>zopim.xml</file>
                 </chat>
             </updates>
         </layout>
@@ -122,8 +122,8 @@
     <adminhtml>
         <layout>
             <updates>
-                <chat module="chat">
-                    <file>chat.xml</file>
+                <chat>
+                    <file>zopim.xml</file>
                 </chat>
             </updates>
         </layout>
@@ -135,7 +135,7 @@
                 <use>admin</use>
                 <args>
                     <module>Diglin_Chat_Adminhtml</module>
-                    <frontName>chat</frontName>
+                    <frontName>zopim</frontName>
                 </args>
             </chat>
        </routers>

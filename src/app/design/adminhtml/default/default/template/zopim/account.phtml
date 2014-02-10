@@ -40,7 +40,7 @@ if ($this->getIsAuthenticated()) {
                     <div style="display:inline-block;background:#444;color:#fff;font-size:10px;text-transform:uppercase;padding:3px 8px;-moz-border-radius:5px;-webkit-border-radius:5px;">
                         <?php echo $this->getAccountDetails(); ?>
                     </div>
-                    <p><?php echo $this->__('You may now proceed to the dashboard to chat with customers or customize your widget through the menu.'); ?></p>
+                    <p><?php echo $this->__('You may now proceed to the  <a href="%s" target="_blank">dashboard</a> to chat with customers or customize your widget through the menu <a href="%s">"Zopim Live Chat > Configuration"</a>.', Diglin_Chat_Helper_Data::ZOPIM_DASHBOARD_URL, $this->getUrl('adminhtml/system_config/edit/section/chat')); ?></p>
                 </div>
             </div>
         </div>

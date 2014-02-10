@@ -32,7 +32,7 @@ class Diglin_Chat_Block_Adminhtml_Config_Source_Hint
     {
         $buttonSignUp = $this->getLayout()->createBlock('adminhtml/widget_button')->setData(array(
             'label'     => $this->__('Sign Up or Login to Zopim'),
-            'onclick'   => "window.open('" . $this->getUrl('chat/index/account') . "', '_self');",
+            'onclick'   => "window.open('" . $this->getUrl('zopim/index/account') . "', '_self');",
             'class'     => 'add',
             'type'      => 'button',
             'id'        => 'zopim-account',
@@ -48,6 +48,6 @@ class Diglin_Chat_Block_Adminhtml_Config_Source_Hint
         ))
             ->toHtml();
 
-        return '<p>' . $buttonSignUp . '&nbsp;' . $buttonDashboard . ' - <strong>Diglin_Chat Version: '. Mage::getConfig()->getModuleConfig('Diglin_Chat')->version .'</strong></p>';
+        return '<p>' . $buttonSignUp . '&nbsp;' . $buttonDashboard . ' - <strong>Diglin_Chat Version: '. Mage::getConfig()->getModuleConfig('Diglin_Chat')->version .' - Powered by <a href="http://www.diglin.com/?utm_source=magento&utm_medium=extension&utm_campaign=zopim">Diglin GmbH</a></strong></p>';
     }
 }

@@ -25,9 +25,12 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
         $this->_forward('account');
     }
 
+    /**
+     *
+     */
     public function dashboardAction()
     {
-        // @deprecated for security reason on Zopim side, we forward to zopim directly
+        // @deprecated for security reason on Zopim side, we forward to
         //$this->loadLayout()->renderLayout();
         $this->_redirectUrl(Diglin_Chat_Helper_Data::ZOPIM_DASHBOARD_URL);
     }
@@ -41,7 +44,7 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
     {
         $this->loadLayout();
 
-        $chatAccountBlock = $this->getLayout()->getBlock('chat_account');
+        $chatAccountBlock = $this->getLayout()->getBlock('zopim_account');
 
         $key = Mage::getStoreConfig('chat/chatconfig/key');
         $username = Mage::getStoreConfig('chat/chatconfig/username');
@@ -200,7 +203,7 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
         $config->saveConfig('chat/chatconfig/salt', $zopimObject->getSalt(), 'default', 0);
         $config->saveConfig('chat/chatconfig/use_ssl', $zopimObject->getUseSsl(), 'default', 0);
 
-        MAge::app()->cleanCache(array(Mage_Core_Model_Config::CACHE_TAG));
+        Mage::app()->cleanCache(array(Mage_Core_Model_Config::CACHE_TAG));
 
         $this->_initLayoutMessages('adminhtml/session');
         $this->renderLayout();

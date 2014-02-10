@@ -20,14 +20,21 @@
  */
  -->
 <layout version="0.1.0">
-	<default>
-		<reference name="before_body_end">
-			<block type="chat/display" name="chat_zopim_default">
-<!--				<action method="setForceButtonDisplay"><value>1</value></action>-->
-<!--				<action method="setForceBubbleDisplay"><value>1</value></action>-->
-			</block>
+    <default>
+        <reference name="before_body_end">
+            <block type="chat/display" name="chat_zopim_default">
+                <!--				<action method="setForceButtonDisplay"><value>1</value></action>-->
+                <!--				<action method="setForceBubbleDisplay"><value>1</value></action>-->
+            </block>
             <!-- Javascript links for Test Only - activated from backend configuration Zopim Page via the debug field select -->
-			<block type="core/template" name="chat_footer" template="chat/zopim/test.phtml"/>
-		</reference>
-	</default>
+            <block type="core/template" name="chat_footer">
+                <action method="setTemplate" ifconfig="chat/chatconfig/debug"><template>zopim/test.phtml</template></action>
+            </block>
+        </reference>
+    </default>
+
+    <!-- Sample to disable the chat on the Index CMS page -->
+    <!--<cms_index_index>-->
+        <!--<remove name="chat_zopim_default"/>-->
+    <!--</cms_index_index>-->
 </layout>

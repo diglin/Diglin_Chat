@@ -18,12 +18,18 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Block_Adminhtml_Dashboard extends Mage_Adminhtml_Block_Abstract
+class Diglin_Chat_Model_Config_Source_Badgecolor
 {
-    const ZOPIM_DASHBOARD_URL = 'https://dashboard.zopim.com/';
-
-    public function getUsername()
+    /**
+     * Options getter
+     *
+     * @return array
+     */
+    public function toOptionArray()
     {
-        return Mage::getStoreConfig('chat/chatconfig/username');
+        return array(
+            array('value' => 'badge_color_primary', 'label' => Mage::helper('chat')->__('Use primary color')),
+            array('value' => 'badge_color_customized', 'label' => Mage::helper('chat')->__('Use custom color')),
+        );
     }
 }

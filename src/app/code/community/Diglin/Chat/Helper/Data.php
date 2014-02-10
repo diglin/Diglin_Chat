@@ -124,7 +124,11 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
 
     public function getDisableSound()
     {
-        return Mage::getStoreConfigFlag('chat/chatconfig/disable_sound');
+        // Compatibility with version < 2.0.0
+        if (Mage::getStoreConfig('chat/chatconfig/disable_sound') && !Mage::getStoreConfig('chat/widgetconfig/disable_sound')) {
+            return Mage::getStoreConfig('chat/chatconfig/disable_sound');
+        }
+        return Mage::getStoreConfig('chat/widgetconfig/disable_sound');
     }
 
     /* Greetings Config */
@@ -147,14 +151,14 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig('chat/widgetconfig/offline_message');
     }
 
-    public function getOfflineGreeting ()
-    {
-        // Compatibility with version < 2.0.0
-        if (Mage::getStoreConfig('chat/chatconfig/away_greeting_short') && !Mage::getStoreConfig('chat/widgetconfig/offline_greeting')) {
-            return Mage::getStoreConfig('chat/chatconfig/away_greeting_short');
-        }
-        return Mage::getStoreConfig('chat/widgetconfig/offline_greeting');
-    }
+//    public function getOfflineGreeting ()
+//    {
+//        // Compatibility with version < 2.0.0
+//        if (Mage::getStoreConfig('chat/chatconfig/away_greeting_short') && !Mage::getStoreConfig('chat/widgetconfig/offline_greeting')) {
+//            return Mage::getStoreConfig('chat/chatconfig/away_greeting_short');
+//        }
+//        return Mage::getStoreConfig('chat/widgetconfig/offline_greeting');
+//    }
 
 //    public function getOnlineGreetingLong ()
 //    {
@@ -251,6 +255,11 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
             return Mage::getStoreConfig('chat/bubbleconfig/text');
         }
         return Mage::getStoreConfig('chat/widgetconfig/bubble_text');
+    }
+
+    public function getBubbleColorPrimary ()
+    {
+        return Mage::getStoreConfig('chat/widgetconfig/theme_bubble_color_primary');
     }
 
     public function getBubbleColor ()
@@ -427,6 +436,11 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
     public function getBadgeText()
     {
         return Mage::getStoreConfig('chat/widgetconfig/badge_text');
+    }
+
+    public function getBadgeColorPrimary ()
+    {
+        return Mage::getStoreConfig('chat/widgetconfig/theme_badge_color_primary');
     }
 
     public function getBadgeColor ()

@@ -38,7 +38,6 @@ $installer->getConnection()->query($query);
 $query = "UPDATE " . $this->getTable('core/config_data') . " SET path=REPLACE(path,'chatconfig/unreadflag','widgetconfig/unreadflag') WHERE path LIKE '%chatconfig/unreadflag%'";
 $installer->getConnection()->query($query);
 
-
 $query = "UPDATE " . $this->getTable('core/config_data') . " SET path=REPLACE(path,'bubbleconfig/','widgetconfig/bubble_') WHERE path LIKE '%bubbleconfig/%'";
 $installer->getConnection()->query($query);
 
@@ -53,9 +52,9 @@ $installer->getConnection()->query($query);
 $query = "UPDATE " . $this->getTable('core/config_data') . " SET path=REPLACE(path,'chat/windowconfig/color','chat/widgetconfig/theme_primary_color') WHERE path LIKE '%chat/windowconfig/color%'";
 $installer->getConnection()->query($query);
 
-
+$query = "UPDATE " . $this->getTable('core/config_data') . " SET path=REPLACE(path,'chat/chatconfig/disable_sound','chat/widgetconfig/disable_sound') WHERE path LIKE '%chat/chatconfig/disable_sound%'";
 $installer->getConnection()->query($query);
 
-
+$installer->getConnection()->query($query);
 
 $installer->endSetup();

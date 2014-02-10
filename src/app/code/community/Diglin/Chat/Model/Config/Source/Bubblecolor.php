@@ -18,4 +18,18 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Block_Adminhtml_Account extends Mage_Core_Block_Template {}
+class Diglin_Chat_Model_Config_Source_Bubblecolor
+{
+    /**
+     * Options getter
+     *
+     * @return array
+     */
+    public function toOptionArray()
+    {
+        return array(
+            array('value' => 'bubble_color_primary', 'label' => Mage::helper('chat')->__('Use primary color')),
+            array('value' => 'bubble_color_customized', 'label' => Mage::helper('chat')->__('Use custom color')),
+        );
+    }
+}

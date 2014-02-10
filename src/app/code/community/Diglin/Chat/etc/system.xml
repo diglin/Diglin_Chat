@@ -28,15 +28,14 @@
 <config>
     <tabs>
         <diglin translate="label">
-            <label><![CDATA[<div><img alt="Diglin" title="Diglin" width="66" height="23" style="display:block;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAAAXCAYAAAC/F5msAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2QjlDMEY2NTc5NkUxMUUzQTk3RUQ4RTMwOTcyMzZFOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2QjlDMEY2Njc5NkUxMUUzQTk3RUQ4RTMwOTcyMzZFOSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjZCOUMwRjYzNzk2RTExRTNBOTdFRDhFMzA5NzIzNkU5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjZCOUMwRjY0Nzk2RTExRTNBOTdFRDhFMzA5NzIzNkU5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+yStvXwAAApxJREFUeNrsWF1OwkAQ3hoeNekNrCewr/oiPQHlBvQGeALhBOAJ4AbgCYAnX3sDewRMfK8z5Fsz2exPrYCmcZIBWnZ+9tv5a6O6rtU/KdXjjyiKDheXd3d9+hoQJ8Q74uXH6+u+ixs3AyDiGwwEgTCi64WxviTOugiGCcSF+D2zrE/5PoEUdz01DhFxdX/PKbFxrNkSV8SPbSODgGTdbGNLOrK2zpKeifaJ9GxPERGVR4bTI2eg/kBkPIH7x1Z8AILQrXDyJs2JuXbESJNNV9OkJ34PkR6pBQRZM1ZcQD3hy+vHxA84ucrQwWtm2o5OFSE3wH8leIqDctlLRX3j9C2hKxcdMIUfrO/ZllZfQHD+k4IMYGwtIGjqs3E26ABBgqngiK0Im+FtyqXgnPTeeOpTLHRpf1cW/QmY9fGhr11dQ8FY4QFBGQZNGonNLBE5GU7CVwSlHB/CVDgaQ28bqqCrQIQ7O2TPEmabAAjKs7GBdoBALYTeULfRcrxuqE+f5OoA8EEgSNdE+KGQfom1WH4ThGkgTENdyCdXnnh4e/d2DZFXIRCWEuEu0YWIhqQBCEVgzd5TIJtQ8qtAiA34akKTkN3pDRG4Y/EglwbsvAi5FctAzkW3pxyoXAVwjpMak3OLgL652OwMxU7WnWdXtAn7OWQ2jnFfoQXWAbBaRYRCi9l7JstDe/SBgUKXWaZUBrpwPR8IuSlk945J97FFIW7+0CXeR8jOMffME2s4FdsGKzFcpW07AclzFL6JTjUx/nPa/tH7CKONLoB8/sPi+Z2N667FdeYak6EunjxbrM/1PkKHaYk0UecCwRiVnxCJGoT1sUEIpkaD54ZTgaDH7AcBAEfkjmwtz/qqzpPnM+HcrisDlRWIf1LqU4ABALewLXRXQ1aPAAAAAElFTkSuQmCC">
-</div>]]></label>
+            <label><![CDATA[<div><img alt="Diglin" title="Diglin" width="66" height="23" style="display:block;" src="data:image/png;base64,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"></div>]]></label>
             <sort_order>400</sort_order>
         </diglin>
     </tabs>
     
     <sections>
-        <chat module="chat">
-            <label>Zopim Live Chat</label>
+        <chat module="chat" translate="label">
+            <label><![CDATA[<img src="https://zopim.com/assets/branding/zopim.com/chatman/online.png" style="vertical-align:middle"/> Zopim Live Chat]]></label>
             <tab>diglin</tab>
             <frontend_type>text</frontend_type>
             <sort_order>110</sort_order>
@@ -51,7 +50,7 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                 </hint>
-                <chatconfig>
+                <chatconfig module="chat" translate="label">
                     <label>Global Configuration</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>10</sort_order>
@@ -116,17 +115,7 @@
                             <!--<show_in_website>1</show_in_website>-->
                             <!--<show_in_store>1</show_in_store>-->
                         <!--</allow_email>-->
-                        <disable_sound>
-                            <label>Disable sound notifications</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>70</sort_order>
-                            <comment>Configure whether sound notifications are played.</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </disable_sound>
-                        <debug>
+                        <debug module="chat" translate="label comment">
                             <label>Debug</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -139,7 +128,7 @@
                     </fields>
                 </chatconfig>
 
-                <widgetconfig>
+                <widgetconfig module="chat" translate="label comment">
                     <label>Widget Configuration</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>20</sort_order>
@@ -149,9 +138,9 @@
                     <depends>
                         <widget_api>1</widget_api>
                     </depends>
-                    <comment><![CDATA[<ul><li><strong>IMPORTANT</strong>: If you've got the lite plan, not all features will be functional like widget customization (e.g. color). Check the plan you have in the menu <strong>Zopim Live Chat > Account Set Up</strong>.</li></ul>]]></comment>
+                    <comment><![CDATA[<ul><li><strong>IMPORTANT</strong>: Depending on your Zopim plan, not all features will be functional like widget customization (e.g. color). Check the plan you have in the menu <strong>Zopim Live Chat > Account Setup</strong> or directly on <a href="http://bit.ly/1kcTNL5">Zopim website</a>.</li></ul>]]></comment>
                     <fields>
-                        <general_config>
+                        <general_config module="chat" translate="label">
                             <label>General Config</label>
                             <sort_order>1</sort_order>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
@@ -159,27 +148,40 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </general_config>
-                        <type_config>
+                        <type_config module="chat" translate="label comment">
                             <label>Type of configuration</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_simpleadvanced</source_model>
-                            <comment><![CDATA[Use "simple" and go to <a href="https://dashboard.zopim.com/">dashboard.zopim.com</a> to configure the widget. Use "Advanced" to configure the widget thanks to this configuration page. In this last case, the configuration will override some configuration values of the <a href="https://dashboard.zopim.com/">dashboard.zopim.com</a>.]]></comment>
+                            <comment><![CDATA[Use "simple" and go to <a href="https://dashboard.zopim.com/">dashboard.zopim.com</a> to configure the widget. Use "Advanced" to configure the widget per store view or have control directly from this configuration page. In this last case, the configuration will override some configuration values of the <a href="https://dashboard.zopim.com/">dashboard.zopim.com</a>.]]></comment>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </type_config>
-                        <offline_greeting>
-                            <label>Offline Greeting</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>3</sort_order>
+                        <!--<offline_greeting>-->
+                            <!--<label>Offline Greeting</label>-->
+                            <!--<frontend_type>text</frontend_type>-->
+                            <!--<sort_order>3</sort_order>-->
+                            <!--<show_in_default>1</show_in_default>-->
+                            <!--<show_in_website>1</show_in_website>-->
+                            <!--<show_in_store>1</show_in_store>-->
+                            <!--<depends>-->
+                                <!--<type_config>adv</type_config>-->
+                            <!--</depends>-->
+                        <!--</offline_greeting>-->
+                        <disable_sound module="chat" translate="label comment">
+                            <label>Disable sound notifications</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <comment>Configure whether sound notifications are played.</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <depends>
                                 <type_config>adv</type_config>
                             </depends>
-                        </offline_greeting>
+                        </disable_sound>
                         <!--<widget_api>-->
                             <!--<label>Widget API</label>-->
                             <!--<frontend_type>select</frontend_type>-->
@@ -193,7 +195,7 @@
 
                         <!-- Window Config -->
 
-                        <window_config>
+                        <window_config module="chat" translate="label">
                             <label>Chat Window</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
                             <sort_order>10</sort_order>
@@ -204,11 +206,13 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </window_config>
-                        <window_theme>
+                        <window_theme module="chat" translate="label">
                             <label>Simple or Classic Window</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_themes</source_model>
                             <sort_order>20</sort_order>
+                            <tooltip><![CDATA[<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAACFCAIAAAAitAhhAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMTgwMTE3NDA3MjA2ODExOTEwOTg0NTc1ODY3OTFFRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NTQ1MEQ2NjdGRDYxMUUzQUU1ODk2RjAyM0IxMThFNCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NTQ1MEQ2NTdGRDYxMUUzQUU1ODk2RjAyM0IxMThFNCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MDE4MDExNzQwNzIwNjgxMTkxMDk4NDU3NTg2NzkxRUYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMTkxMDk4NDU3NTg2NzkxRUYiLz4gPC9yZGY6RGVzY3Jp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">
+]]></tooltip>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -227,7 +231,7 @@
                             <!--<show_in_website>1</show_in_website>-->
                             <!--<show_in_store>1</show_in_store>-->
                         <!--</window_show>-->
-                        <window_title>
+                        <window_title module="chat" translate="label comment">
                             <label>Top Title</label>
                             <frontend_type>text</frontend_type>
                             <comment>Set the title on the top of the chat window.</comment>
@@ -241,7 +245,7 @@
                                 <!--<widget_api>new</widget_api>-->
                             </depends>
                         </window_title>
-                        <theme_primary_color>
+                        <theme_primary_color module="chat" translate="label comment">
                             <label>Primary Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>
@@ -267,7 +271,7 @@
                             <!--</depends>-->
                         <!--</window_theme>-->
                         <!-- The API by Zopim doesn't work correctly (at the moment) -->
-                        <window_size>
+                        <window_size module="chat" translate="label comment">
                             <label>Size</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_windowsize</source_model>
@@ -281,12 +285,39 @@
                             </depends>
                         </window_size>
                         <!-- The API by Zopim doesn't work correctly (at the moment) -->
+                        <button_position module="chat" translate="label comment">
+                            <label>Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_buttonposition</source_model>
+                            <comment><![CDATA[<strong>ATTENTION</strong>: may not work correctly until Zopim fix his API.]]></comment>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <type_config>adv</type_config>
+                            </depends>
+                        </button_position>
+                        <button_position_mobile module="chat" translate="label comment">
+                            <label>Position on mobile devices</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_mobileposition</source_model>
+                            <sort_order>56</sort_order>
+                            <comment>Set the position on mobile devices.</comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <type_config>adv</type_config>
+                            </depends>
+                        </button_position_mobile>
+                        <!-- The API by Zopim doesn't work correctly (at the moment) -->
                         <!--<window_position>-->
                             <!--<label>Window position</label>-->
                             <!--<frontend_type>select</frontend_type>-->
                             <!--<source_model>chat/config_source_windowposition</source_model>-->
                             <!--<comment><![CDATA[Set position of the chat window. <strong>ATTENTION</strong>: may not work correctly until Zopim fix his API.]]></comment>-->
-                            <!--<sort_order>60</sort_order>-->
+                            <!--<sort_order>55</sort_order>-->
                             <!--<show_in_default>1</show_in_default>-->
                             <!--<show_in_website>1</show_in_website>-->
                             <!--<show_in_store>1</show_in_store>-->
@@ -312,34 +343,34 @@
                             <!--<show_in_website>1</show_in_website>-->
                             <!--<show_in_store>1</show_in_store>-->
                         <!--</window_offset_vertical>-->
-                        <window_onshow>
-                            <label>On Show Callback</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>60</sort_order>
-                            <comment>Javascript function name callback which will be fired when showing the window. Note: the callback will not be fired if the chat window was shown using an API call.</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <type_config>adv</type_config>
-                            </depends>
-                        </window_onshow>
-                        <window_onhide>
-                            <label>On Hide Callback</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>65</sort_order>
-                            <comment>Javascript function name callback which will be fired when hiding the window. Note: the callback will not be fired if the chat window was hidden using an API call.</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <type_config>adv</type_config>
-                            </depends>
-                        </window_onhide>
+                        <!--<window_onshow>-->
+                            <!--<label>On Show Callback</label>-->
+                            <!--<frontend_type>text</frontend_type>-->
+                            <!--<sort_order>60</sort_order>-->
+                            <!--<comment>Javascript function name callback which will be fired when showing the window. Note: the callback will not be fired if the chat window was shown using an API call.</comment>-->
+                            <!--<show_in_default>1</show_in_default>-->
+                            <!--<show_in_website>1</show_in_website>-->
+                            <!--<show_in_store>1</show_in_store>-->
+                            <!--<depends>-->
+                                <!--<type_config>adv</type_config>-->
+                            <!--</depends>-->
+                        <!--</window_onshow>-->
+                        <!--<window_onhide>-->
+                            <!--<label>On Hide Callback</label>-->
+                            <!--<frontend_type>text</frontend_type>-->
+                            <!--<sort_order>65</sort_order>-->
+                            <!--<comment>Javascript function name callback which will be fired when hiding the window. Note: the callback will not be fired if the chat window was hidden using an API call.</comment>-->
+                            <!--<show_in_default>1</show_in_default>-->
+                            <!--<show_in_website>1</show_in_website>-->
+                            <!--<show_in_store>1</show_in_store>-->
+                            <!--<depends>-->
+                                <!--<type_config>adv</type_config>-->
+                            <!--</depends>-->
+                        <!--</window_onhide>-->
 
                         <!-- Badge Config-->
 
-                        <badge_config>
+                        <badge_config module="chat" translate="label">
                             <label>Chat Badge</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
                             <sort_order>70</sort_order>
@@ -351,7 +382,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </badge_config>
-                        <badge_show>
+                        <badge_show module="chat" translate="label comment">
                             <label>Show Badge</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_showhide</source_model>
@@ -365,11 +396,13 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </badge_show>
-                        <badge_layout>
+                        <badge_layout module="chat" translate="label comment">
                             <label>Layout</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_layout</source_model>
                             <comment>Image right (Image on right, text on left), Image left (Image on left, text on right), Image only, Text only</comment>
+                            <tooltip><![CDATA[<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAABZCAIAAACc1ik+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExOTdBNTg1QUY1NjIxQTI2NCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4NkYyQzQ2NjdGRDcxMUUzQjFCQTlGNDEyNTVDRjYyQiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4NkYyQzQ2NTdGRDcxMUUzQjFCQTlGNDEyNTVDRjYyQiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Rjc3RjExNzQwNzIwNjgxMTk3QTU4NUFGNTYyMUEyNjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjc3RjExNzQwNzIwNjgxMTk3QTU4NUFGNTYyMUEyNjQiLz4gPC9yZGY6RGVzY3Jp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">
+]]></tooltip>
                             <sort_order>90</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -379,12 +412,11 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </badge_layout>
-                        <theme_badge_color>
+                        <theme_badge_color_primary module="chat" translate="label">
                             <label>Badge Color</label>
-                            <frontend_type>text</frontend_type>
-                            <validate>color</validate>
-                            <sort_order>100</sort_order>
-                            <comment><![CDATA[Color in hexadecimal format ('AABBCC’)]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_badgecolor</source_model>
+                            <sort_order>95</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -392,8 +424,23 @@
                                 <window_theme>simple</window_theme>
                                 <type_config>adv</type_config>
                             </depends>
+                        </theme_badge_color_primary>
+                        <theme_badge_color module="chat" translate="label comment">
+                            <label>Customized Badge Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <sort_order>96</sort_order>
+                            <comment><![CDATA[Color in hexadecimal format ('AABBCC’)]]></comment>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <window_theme>simple</window_theme>
+                                <type_config>adv</type_config>
+                                <theme_badge_color_primary>badge_color_customized</theme_badge_color_primary>
+                            </depends>
                         </theme_badge_color>
-                        <badge_image>
+                        <badge_image module="chat" translate="label comment">
                             <label>Image</label>
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
@@ -409,7 +456,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </badge_image>
-                        <badge_text>
+                        <badge_text module="chat" translate="label comment">
                             <label>Text</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>120</sort_order>
@@ -439,7 +486,7 @@
 
                         <!-- Concierge Config -->
 
-                        <concierge_config>
+                        <concierge_config module="chat" translate="label">
                             <label>Chat Concierge</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
                             <sort_order>130</sort_order>
@@ -451,7 +498,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </concierge_config>
-                        <concierge_name>
+                        <concierge_name module="chat" translate="label comment">
                             <label>Display Title</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>140</sort_order>
@@ -464,7 +511,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </concierge_name>
-                        <concierge_title>
+                        <concierge_title module="chat" translate="label comment">
                             <label>Byline</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>150</sort_order>
@@ -477,13 +524,13 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </concierge_title>
-                        <concierge_avatar>
+                        <concierge_avatar module="chat" translate="label comment">
                             <label>Avatar</label>
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">chat</upload_dir>
                             <base_url type="media" scope_info="1">chat</base_url>
-                            <sort_order>140</sort_order>
+                            <sort_order>160</sort_order>
                             <comment>Set the concierge’s avatar. Appears in greeting and status messages. Allowed file types: jpeg, gif, png</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
@@ -496,7 +543,7 @@
 
                         <!-- Minimized Chat Button -->
 
-                        <message_chat_bar>
+                        <message_chat_bar module="chat" translate="label">
                             <label>Minimized Chat Button</label>
                             <sort_order>200</sort_order>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
@@ -507,7 +554,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </message_chat_bar>
-                        <online_message>
+                        <online_message module="chat" translate="label">
                             <label>Online Message</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>210</sort_order>
@@ -518,7 +565,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </online_message>
-                        <offline_message>
+                        <offline_message module="chat" translate="label">
                             <label>Offline Message</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>220</sort_order>
@@ -577,56 +624,30 @@
 
                         <!-- Button Config -->
 
-                        <button_config>
-                            <label>Button Configuration</label>
-                            <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
-                            <sort_order>300</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <type_config>adv</type_config>
-                            </depends>
-                        </button_config>
-                        <button_show>
-                            <label>Show the button by default or not</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>310</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <type_config>adv</type_config>
-                            </depends>
-                        </button_show>
-                        <!-- The API by Zopim doesn't work correctly (at the moment) -->
-                        <button_position>
-                            <label>Position</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>chat/config_source_buttonposition</source_model>
-                            <comment><![CDATA[<strong>ATTENTION</strong>: may not work correctly until Zopim fix his API.]]></comment>
-                            <sort_order>320</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <type_config>adv</type_config>
-                            </depends>
-                        </button_position>
-                        <button_position_mobile>
-                            <label>Position on mobile devices</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>chat/config_source_mobileposition</source_model>
-                            <sort_order>330</sort_order>
-                            <comment>Set the position of the chat button on mobile devices.</comment>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <type_config>adv</type_config>
-                            </depends>
-                        </button_position_mobile>
+                        <!--<button_config>-->
+                            <!--<label>Button Configuration</label>-->
+                            <!--<frontend_model>chat/adminhtml_config_source_heading</frontend_model>-->
+                            <!--<sort_order>300</sort_order>-->
+                            <!--<show_in_default>1</show_in_default>-->
+                            <!--<show_in_website>1</show_in_website>-->
+                            <!--<show_in_store>1</show_in_store>-->
+                            <!--<depends>-->
+                                <!--<type_config>adv</type_config>-->
+                            <!--</depends>-->
+                        <!--</button_config>-->
+                        <!--<button_show>-->
+                            <!--<label>Show the button by default or not</label>-->
+                            <!--<frontend_type>select</frontend_type>-->
+                            <!--<source_model>adminhtml/system_config_source_yesno</source_model>-->
+                            <!--<sort_order>310</sort_order>-->
+                            <!--<show_in_default>1</show_in_default>-->
+                            <!--<show_in_website>1</show_in_website>-->
+                            <!--<show_in_store>1</show_in_store>-->
+                            <!--<depends>-->
+                                <!--<type_config>adv</type_config>-->
+                            <!--</depends>-->
+                        <!--</button_show>-->
+
                         <!--<button_hidewhenoffline>-->
                             <!--<label>Hide when offline</label>-->
                             <!--<frontend_type>select</frontend_type>-->
@@ -667,7 +688,7 @@
 
                         <!-- Bubble Config -->
 
-                        <bubble_config>
+                        <bubble_config module="chat" translate="label">
                             <label>Chat Bubble</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
                             <sort_order>400</sort_order>
@@ -679,8 +700,21 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </bubble_config>
-                        <theme_bubble_color>
+                        <theme_bubble_color_primary module="chat" translate="label">
                             <label>Bubble Color</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>chat/config_source_bubblecolor</source_model>
+                            <sort_order>403</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <window_theme>classic</window_theme>
+                                <type_config>adv</type_config>
+                            </depends>
+                        </theme_bubble_color_primary>
+                        <theme_bubble_color module="chat" translate="label comment">
+                            <label>Customized Bubble Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>
                             <sort_order>405</sort_order>
@@ -691,9 +725,10 @@
                             <depends>
                                 <window_theme>classic</window_theme>
                                 <type_config>adv</type_config>
+                                <theme_bubble_color_primary>bubble_color_customized</theme_bubble_color_primary>
                             </depends>
                         </theme_bubble_color>
-                        <bubble_show>
+                        <bubble_show module="chat" translate="label comment">
                             <label>Show the Bubble</label>
                             <frontend_type>select</frontend_type>
                             <source_model>chat/config_source_showhide</source_model>
@@ -707,7 +742,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </bubble_show>
-                        <bubble_title>
+                        <bubble_title module="chat" translate="label">
                             <label>Title</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>420</sort_order>
@@ -719,7 +754,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </bubble_title>
-                        <bubble_text>
+                        <bubble_text module="chat" translate="label">
                             <label>Text</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>430</sort_order>
@@ -734,7 +769,7 @@
 
                         <!-- Cookie Law Config -->
 
-                        <cookielaw_config>
+                        <cookielaw_config module="chat" translate="label">
                             <label>Cookie Law Configuration</label>
                             <frontend_model>chat/adminhtml_config_source_heading</frontend_model>
                             <sort_order>500</sort_order>
@@ -745,7 +780,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </cookielaw_config>
-                        <cookielaw_comply>
+                        <cookielaw_comply module="chat" translate="label comment">
                             <label>Cookie Comply</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -758,7 +793,7 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </cookielaw_comply>
-                        <cookielaw_consent>
+                        <cookielaw_consent module="chat" translate="label comment">
                             <label>Cookie Implicit Consent</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
@@ -769,12 +804,13 @@
                             <show_in_store>1</show_in_store>
                             <depends>
                                 <cookielaw_comply>1</cookielaw_comply>
+                                <type_config>adv</type_config>
                             </depends>
                         </cookielaw_consent>
                     </fields>
                 </widgetconfig>
 
-                <departments>
+                <departments module="chat" translate="label">
                     <label>Departments Configuration</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>50</sort_order>
@@ -782,11 +818,11 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <filter>
+                        <filter module="chat" translate="label comment">
                             <label>Filter</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>10</sort_order>
-                            <comment>Shows only defined departments. e.g. => 'technical support','sales'. Display only the specified departments in the pre-chat form.  All other departments will be hidden regardless of their status.</comment>
+                            <comment><![CDATA[Shows only defined departments. e.g. => marketing,support,sales - Display only the specified departments in the pre-chat form.  All other departments will be hidden regardless of their status.]]></comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>

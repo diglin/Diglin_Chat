@@ -27,15 +27,15 @@
     </adminhtml_system_config_edit>
 
     <!-- Deprecated for security policy on Zopim side -->
-    <!--<zopim_index_dashboard>-->
+    <!--<chat_index_dashboard>-->
         <!--<reference name="content">-->
             <!--<block type="chat/adminhtml_dashboard" name="zopim_dashboard" as="zopim.dashboard" template="zopim/dashboard.phtml" />-->
         <!--</reference>-->
-    <!--</zopim_index_dashboard>-->
+    <!--</chat_index_dashboard>-->
 
-    <zopim_index_account>
+    <chat_index_account>
         <reference name="content">
-            <block type="chat/adminhtml_account" name="zopim_account" as="zopim.account" template="zopim/account.phtml" />
+            <block type="adminhtml/abstract" name="zopim_account" as="zopim.account" template="zopim/account.phtml" />
         </reference>
-    </zopim_index_account>
+    </chat_index_account>
 </layout>
