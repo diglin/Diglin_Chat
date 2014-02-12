@@ -27,7 +27,7 @@
 -->
 <config>
     <tabs>
-        <diglin translate="label">
+        <diglin>
             <label><![CDATA[<div><img alt="Diglin" title="Diglin" width="66" height="23" style="display:block;" src="data:image/png;base64,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"></div>]]></label>
             <sort_order>400</sort_order>
         </diglin>
@@ -57,7 +57,7 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <!--<comment><![CDATA[<a href="http://bit.ly/1kcTNL5" target="_blank" title="Go to Zopim Website">Sign Up to Zopim to get a key</a>]]></comment>-->
+                    <comment><![CDATA[<a href="http://bit.ly/1kcTNL5" target="_blank" title="Go to Zopim Website">Sign Up to Zopim to get a key</a>]]></comment>
                     <fields>
                         <enabled module="chat" translate="label">
                             <label>Enabled</label>
@@ -158,17 +158,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </type_config>
-                        <!--<offline_greeting>-->
-                            <!--<label>Offline Greeting</label>-->
-                            <!--<frontend_type>text</frontend_type>-->
-                            <!--<sort_order>3</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<type_config>adv</type_config>-->
-                            <!--</depends>-->
-                        <!--</offline_greeting>-->
                         <disable_sound module="chat" translate="label comment">
                             <label>Disable sound notifications</label>
                             <frontend_type>select</frontend_type>
@@ -182,16 +171,6 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </disable_sound>
-                        <!--<widget_api>-->
-                            <!--<label>Widget API</label>-->
-                            <!--<frontend_type>select</frontend_type>-->
-                            <!--<source_model>chat/config_source_api</source_model>-->
-                            <!--<comment>Since year 2013, new widget appeared. Some features related to this new widget may not work correctly. Zopim works to fix those problems.</comment>-->
-                            <!--<sort_order>2</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                        <!--</widget_api>-->
 
                         <!-- Window Config -->
 
@@ -220,17 +199,6 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </window_theme>
-                        <!--<window_show>-->
-                            <!--<label>Show the window</label>-->
-                            <!--<frontend_type>select</frontend_type>-->
-                            <!--<source_model>chat/config_source_showhide</source_model>-->
-                            <!--<sort_order>40</sort_order>-->
-                            <!--<comment><![CDATA[Show the chat window. MOBILE: If on a mobile device, attempts to open the live chat widget in a new window instead. May not work on some devices or configurations. Important: Should only be called from a user event listener callback. e.g. <a href="javascript:void($zopim.livechat.window.show())">Open chat in new window</a>-->
-<!--]]></comment>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                        <!--</window_show>-->
                         <window_title module="chat" translate="label comment">
                             <label>Top Title</label>
                             <frontend_type>text</frontend_type>
@@ -258,19 +226,6 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </theme_primary_color>
-                        <!--<window_theme>-->
-                            <!--<label>Theme</label>-->
-                            <!--<frontend_type>select</frontend_type>-->
-                            <!--<source_model>chat/config_source_classicthemes</source_model>-->
-                            <!--<sort_order>60</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<widget_api>old</widget_api>-->
-                            <!--</depends>-->
-                        <!--</window_theme>-->
-                        <!-- The API by Zopim doesn't work correctly (at the moment) -->
                         <window_size module="chat" translate="label comment">
                             <label>Size</label>
                             <frontend_type>select</frontend_type>
@@ -325,24 +280,6 @@
                                 <!--<type_config>adv</type_config>-->
                             <!--</depends>-->
                         <!--</window_position>-->
-                        <!--<window_offset_horizontal>-->
-                            <!--<label>Horizontal Offset</label>-->
-                            <!--<frontend_type>text</frontend_type>-->
-                            <!--<comment>Set the horizontal offset value (integer only) of the chat window from the edge of the browser window.</comment>-->
-                            <!--<sort_order>90</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                        <!--</window_offset_horizontal>-->
-                        <!--<window_offset_vertical>-->
-                            <!--<label>Vertical Offset</label>-->
-                            <!--<frontend_type>text</frontend_type>-->
-                            <!--<comment>Set the vertical offset value (integer only) of the chat window from the edge of the browser window.</comment>-->
-                            <!--<sort_order>100</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                        <!--</window_offset_vertical>-->
                         <!--<window_onshow>-->
                             <!--<label>On Show Callback</label>-->
                             <!--<frontend_type>text</frontend_type>-->
@@ -447,7 +384,7 @@
                             <upload_dir config="system/filesystem/media" scope_info="1">chat</upload_dir>
                             <base_url type="media" scope_info="1">chat</base_url>
                             <sort_order>110</sort_order>
-                            <comment>No effect if the badge layout is text only</comment>
+                            <comment>Recommended dimensions 240x164px. No effect if the badge layout is text only</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -469,20 +406,6 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </badge_text>
-
-                        <!--<unreadflag>-->
-                            <!--<label>Unread Flag</label>-->
-                            <!--<frontend_type>select</frontend_type>-->
-                            <!--<source_model>adminhtml/system_config_source_yesno</source_model>-->
-                            <!--<comment>Represents the little unread messages flag. No: Never show the little flag - Yes: Allow the little flag to be shown</comment>-->
-                            <!--<sort_order>4</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<widget_api>old</widget_api>-->
-                            <!--</depends>-->
-                        <!--</unreadflag>-->
 
                         <!-- Concierge Config -->
 
@@ -531,7 +454,7 @@
                             <upload_dir config="system/filesystem/media" scope_info="1">chat</upload_dir>
                             <base_url type="media" scope_info="1">chat</base_url>
                             <sort_order>160</sort_order>
-                            <comment>Set the concierge’s avatar. Appears in greeting and status messages. Allowed file types: jpeg, gif, png</comment>
+                            <comment>Recommended dimensions 50x50px. Set the concierge’s avatar. Appears in greeting and status messages. Allowed file types: jpeg, gif, png</comment>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -576,115 +499,6 @@
                                 <type_config>adv</type_config>
                             </depends>
                         </offline_message>
-
-                        <!--<message_chat_panel>-->
-                            <!--<label>Message Shown on Chat Panel</label>-->
-                            <!--<sort_order>9</sort_order>-->
-                            <!--<frontend_model>chat/adminhtml_config_source_heading</frontend_model>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<widget_api>old</widget_api>-->
-                            <!--</depends>-->
-                        <!--</message_chat_panel>-->
-                        <!--<online_greeting_long>-->
-                            <!--<label>Online Greeting Long</label>-->
-                            <!--<frontend_type>text</frontend_type>-->
-                            <!--<sort_order>10</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<widget_api>old</widget_api>-->
-                            <!--</depends>-->
-                        <!--</online_greeting_long>-->
-                        <!--<offline_greeting_long>-->
-                            <!--<label>Offline Greeting Long</label>-->
-                            <!--<frontend_type>text</frontend_type>-->
-                            <!--<sort_order>11</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<widget_api>old</widget_api>-->
-                            <!--</depends>-->
-                        <!--</offline_greeting_long>-->
-                        <!--<away_greeting_long>-->
-                            <!--<label>Away Greeting Long</label>-->
-                            <!--<frontend_type>text</frontend_type>-->
-                            <!--<sort_order>12</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<widget_api>old</widget_api>-->
-                            <!--</depends>-->
-                        <!--</away_greeting_long>-->
-
-                        <!-- Button Config -->
-
-                        <!--<button_config>-->
-                            <!--<label>Button Configuration</label>-->
-                            <!--<frontend_model>chat/adminhtml_config_source_heading</frontend_model>-->
-                            <!--<sort_order>300</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<type_config>adv</type_config>-->
-                            <!--</depends>-->
-                        <!--</button_config>-->
-                        <!--<button_show>-->
-                            <!--<label>Show the button by default or not</label>-->
-                            <!--<frontend_type>select</frontend_type>-->
-                            <!--<source_model>adminhtml/system_config_source_yesno</source_model>-->
-                            <!--<sort_order>310</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<type_config>adv</type_config>-->
-                            <!--</depends>-->
-                        <!--</button_show>-->
-
-                        <!--<button_hidewhenoffline>-->
-                            <!--<label>Hide when offline</label>-->
-                            <!--<frontend_type>select</frontend_type>-->
-                            <!--<source_model>adminhtml/system_config_source_yesno</source_model>-->
-                            <!--<comment>This prevents visitors from sending you offline messages</comment>-->
-                            <!--<sort_order>230</sort_order>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<type_config>adv</type_config>-->
-                            <!--</depends>-->
-                        <!--</button_hidewhenoffline>-->
-                        <!--<button_offset_horizontal>-->
-                            <!--<label>Horizontal offset</label>-->
-                            <!--<frontend_type>text</frontend_type>-->
-                            <!--<sort_order>340</sort_order>-->
-                            <!--<comment><![CDATA[Set the horizontal offset of the chat button from the edge of the browser window. Distance from the edge of the browser window, in pixels (number)]]></comment>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<type_config>adv</type_config>-->
-                            <!--</depends>-->
-                        <!--</button_offset_horizontal>-->
-                        <!--<button_offset_vertical>-->
-                            <!--<label>Vertical offset</label>-->
-                            <!--<frontend_type>text</frontend_type>-->
-                            <!--<sort_order>350</sort_order>-->
-                            <!--<comment><![CDATA[Set the vertical offset of the chat button from the edge of the browser window. Distance from the edge of the browser window, in pixels (number)]]></comment>-->
-                            <!--<show_in_default>1</show_in_default>-->
-                            <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>1</show_in_store>-->
-                            <!--<depends>-->
-                                <!--<type_config>adv</type_config>-->
-                            <!--</depends>-->
-                        <!--</button_offset_vertical>-->
 
                         <!-- Bubble Config -->
 

@@ -28,7 +28,7 @@
 <config>
     <modules>
         <Diglin_Chat>
-            <version>2.0.0</version>
+            <version>2.0.1</version>
         </Diglin_Chat>
     </modules>
     
@@ -41,6 +41,7 @@
                 <allow_email>1</allow_email>
                 <widget>classic</widget>
                 <disable_sound>0</disable_sound>
+                <debug>0</debug>
                 <!-- values used internally, keep it here as references -->
                 <use_ssl>1</use_ssl>
                 <salt></salt>
@@ -51,10 +52,6 @@
             <widgetconfig>
                 <online_message>Click here to chat</online_message>
                 <offline_message>Leave a message</offline_message>
-                <!--<offline_greeting>We are offline, please let a message</offline_greeting>-->
-                <!--<online_greeting_long>Leave a question or comment and our agents will try to attend to you shortly =)</online_greeting_long>-->
-                <!--<offline_greeting_long>We are offline, but if you leave your message and contact details, we will try to get back to you =)</offline_greeting_long>-->
-                <!--<away_greeting_long>If you leave a question or comment, our agents will be notified and will try to attend to you shortly =)</away_greeting_long>-->
 
                 <theme_bubble_color>E59341</theme_bubble_color>
                 <theme_badge_color>E59341</theme_badge_color>
@@ -66,13 +63,8 @@
 
                 <button_show>1</button_show>
                 <button_position>bl</button_position>
-                <!--<button_hidewhenonline>0</button_hidewhenonline>-->
-                <!--<button_offset_horizontal>0</button_offset_horizontal>-->
-                <!--<button_offset_vertical>0</button_offset_vertical>-->
 
                 <window_title>Support</window_title>
-                <!--<window_offset_horizontal>0</window_offset_horizontal>-->
-                <!--<window_offset_vertical>0</window_offset_vertical>-->
 
                 <concierge_name>Live Support</concierge_name>
                 <concierge_title>Ask us anything</concierge_title>

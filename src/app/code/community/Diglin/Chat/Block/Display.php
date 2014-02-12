@@ -361,6 +361,10 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
     {
         $out = array();
 
+        if ($this->getHelper()->getWindowTheme() == 'classic') {
+            return;
+        }
+
         if (strlen($this->getHelper()->getConciergeAvatar()) > 0) {
             $out[] = "\$zopim.livechat.concierge.setAvatar('" . Mage::getBaseUrl('media') . 'chat/' . $this->getHelper()->getConciergeAvatar() . "')";
         }

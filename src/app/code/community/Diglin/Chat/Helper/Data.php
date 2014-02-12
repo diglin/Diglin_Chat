@@ -37,6 +37,9 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         $this->_config = Mage::getStoreConfig('chat');
     }
 
+    /**
+     * @return mixed|string
+     */
     public function getCurrentPageURL()
     {
         $pageURL = 'http';
@@ -53,6 +56,12 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return $pageURL;
     }
 
+    /**
+     * @param string $url
+     * @param array $_data
+     * @param string $useSSL
+     * @return mixed
+     */
     public function doPostRequest($url, $_data, $useSSL)
     {
         if ($useSSL != "zopimUseSSL") {
@@ -96,32 +105,50 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         $curl->close();
         return $options;
     }
-    
+
+    /**
+     * @return bool
+     */
     public function allowName ()
     {
         return Mage::getStoreConfigFlag('chat/chatconfig/allow_name');
     }
-    
+
+    /**
+     * @return bool
+     */
     public function allowEmail ()
     {
         return Mage::getStoreConfigFlag('chat/chatconfig/allow_email');
     }
-    
+
+    /**
+     * @return bool
+     */
     public function getEnabled ()
     {
         return Mage::getStoreConfigFlag('chat/chatconfig/enabled');
     }
-    
+
+    /**
+     * @return mixed
+     */
     public function getLanguage ()
     {
         return Mage::getStoreConfig('chat/chatconfig/language');
     }
-    
+
+    /**
+     * @return mixed
+     */
     public function getKey ()
     {
         return Mage::getStoreConfig('chat/chatconfig/key');
     }
 
+    /**
+     * @return mixed
+     */
     public function getDisableSound()
     {
         // Compatibility with version < 2.0.0
@@ -133,6 +160,9 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
 
     /* Greetings Config */
 
+    /**
+     * @return mixed
+     */
     public function getOnlineMessage ()
     {
         // Compatibility with version < 2.0.0
@@ -142,6 +172,9 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig('chat/widgetconfig/online_message');
     }
 
+    /**
+     * @return mixed
+     */
     public function getOfflineMessage ()
     {
         // Compatibility with version < 2.0.0
@@ -150,42 +183,6 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         }
         return Mage::getStoreConfig('chat/widgetconfig/offline_message');
     }
-
-//    public function getOfflineGreeting ()
-//    {
-//        // Compatibility with version < 2.0.0
-//        if (Mage::getStoreConfig('chat/chatconfig/away_greeting_short') && !Mage::getStoreConfig('chat/widgetconfig/offline_greeting')) {
-//            return Mage::getStoreConfig('chat/chatconfig/away_greeting_short');
-//        }
-//        return Mage::getStoreConfig('chat/widgetconfig/offline_greeting');
-//    }
-
-//    public function getOnlineGreetingLong ()
-//    {
-//        // Compatibility with version < 2.0.0
-//        if (Mage::getStoreConfig('chat/chatconfig/online_greeting_long') && !Mage::getStoreConfig('chat/widgetconfig/online_greeting_long')) {
-//            return Mage::getStoreConfig('chat/chatconfig/online_greeting_long');
-//        }
-//        return Mage::getStoreConfig('chat/widgetconfig/online_greeting_long');
-//    }
-//
-//    public function getOfflineGreetingLong ()
-//    {
-//        // Compatibility with version < 2.0.0
-//        if (Mage::getStoreConfig('chat/chatconfig/offline_greeting_long') && !Mage::getStoreConfig('chat/widgetconfig/offline_greeting_long')) {
-//            return Mage::getStoreConfig('chat/chatconfig/offline_greeting_long');
-//        }
-//        return Mage::getStoreConfig('chat/widgetconfig/offline_greeting_long');
-//    }
-//
-//    public function getAwayGreetingLong ()
-//    {
-//        // Compatibility with version < 2.0.0
-//        if (Mage::getStoreConfig('chat/chatconfig/away_greeting_long') && !Mage::getStoreConfig('chat/widgetconfig/away_greeting_long')) {
-//            return Mage::getStoreConfig('chat/chatconfig/away_greeting_long');
-//        }
-//        return Mage::getStoreConfig('chat/widgetconfig/away_greeting_long');
-//    }
 
     /* Widget Config */
 
@@ -209,27 +206,11 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig('chat/widgetconfig/window_theme');
     }
 
-    /**
-     * @deprecated
-     *
-     * @return mixed
-     */
-//    public function getWidgetApi ()
-//    {
-//        return Mage::getStoreConfig('chat/widgetconfig/widget_api');
-//    }
-
-//    public function getUnreadFlag ()
-//    {
-//        // Compatibility with version < 2.0.0
-//        if (Mage::getStoreConfig('chat/chatconfig/unreadflag') && !Mage::getStoreConfig('chat/widgetconfig/unreadflag')) {
-//            return Mage::getStoreConfigFlag('chat/chatconfig/unreadflag');
-//        }
-//        return Mage::getStoreConfigFlag('chat/widgetconfig/unreadflag');
-//    }
-
     /* Bubble Config */
 
+    /**
+     * @return mixed
+     */
     public function getBubbleShow ()
     {
         // Compatibility with version < 2.0.0
@@ -238,7 +219,10 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         }
         return Mage::getStoreConfig('chat/widgetconfig/bubble_show');
     }
-    
+
+    /**
+     * @return mixed
+     */
     public function getBubbleTitle ()
     {
         // Compatibility with version < 2.0.0
@@ -248,6 +232,9 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig('chat/widgetconfig/bubble_title');
     }
 
+    /**
+     * @return mixed
+     */
     public function getBubbleText ()
     {
         // Compatibility with version < 2.0.0
@@ -257,11 +244,17 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig('chat/widgetconfig/bubble_text');
     }
 
+    /**
+     * @return mixed
+     */
     public function getBubbleColorPrimary ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/theme_bubble_color_primary');
     }
 
+    /**
+     * @return mixed
+     */
     public function getBubbleColor ()
     {
         // Compatibility with version < 2.0.0
@@ -273,6 +266,9 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
     
     /* Window Config */
 
+    /**
+     * @return mixed
+     */
     public function getWindowTitle ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/window_title');
@@ -291,40 +287,25 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return $this->getThemePrimaryColor();
     }
 
-//    public function getWindowTheme ()
-//    {
-//        // Compatibility with version < 2.0.0
-//        if (Mage::getStoreConfig('chat/windowconfig/theme') && !Mage::getStoreConfig('chat/widgetconfig/window_theme')) {
-//            return Mage::getStoreConfig('chat/windowconfig/theme');
-//        }
-//        return Mage::getStoreConfig('chat/widgetconfig/window_theme');
-//    }
-
+    /**
+     * @return mixed
+     */
     public function getWindowSize ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/window_size');
     }
 
-//    public function getWindowPosition ()
-//    {
-//        return Mage::getStoreConfig('chat/widgetconfig/window_position');
-//    }
-
-//    public function getWindowOffsetHorizontal ()
-//    {
-//        return (int) Mage::getStoreConfig('chat/widgetconfig/window_offset_horizontal');
-//    }
-//
-//    public function getWindowOffsetVertical ()
-//    {
-//        return (int) Mage::getStoreConfig('chat/widgetconfig/window_offset_vertical');
-//    }
-
+    /**
+     * @return mixed
+     */
     public function getWindowOnShow()
     {
         return Mage::getStoreConfig('chat/widgetconfig/window_onshow');
     }
 
+    /**
+     * @return mixed
+     */
     public function getWindowOnHide()
     {
         return Mage::getStoreConfig('chat/widgetconfig/window_onhide');
@@ -332,6 +313,9 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
 
     /* Button Config */
 
+    /**
+     * @return bool|mixed
+     */
     public function getButtonShow ()
     {
         if (Mage::getStoreConfig('chat/buttonconfig/show') && !Mage::getStoreConfigFlag('chat/widgetconfig/button_show')) {
@@ -340,6 +324,9 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfigFlag('chat/widgetconfig/button_show');
     }
 
+    /**
+     * @return mixed
+     */
     public function getButtonPosition ()
     {
         if (Mage::getStoreConfig('chat/buttonconfig/position') && !Mage::getStoreConfig('chat/widgetconfig/button_position')) {
@@ -348,40 +335,19 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig('chat/widgetconfig/button_position');
     }
 
+    /**
+     * @return mixed
+     */
     public function getButtonPositionMobile ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/button_position_mobile');
     }
 
-//    public function getButtonHideOffline ()
-//    {
-//        // Compatibility with version < 2.0.0
-//        if (Mage::getStoreConfig('chat/buttonconfig/hidewhenoffline') && !Mage::getStoreConfigFlag('chat/widgetconfig/button_hidewhenoffline')) {
-//            return Mage::getStoreConfig('chat/buttonconfig/hidewhenoffline');
-//        }
-//        return Mage::getStoreConfigFlag('chat/widgetconfig/button_hidewhenoffline');
-//    }
-
-//    public function getButtonOffset ()
-//    {
-//        if (Mage::getStoreConfig('chat/buttonconfig/offset') && !Mage::getStoreConfig('chat/widgetconfig/button_offset_vertical')) {
-//            return Mage::getStoreConfig('chat/buttonconfig/offset');
-//        }
-//        return $this->getButtonOffsetVertical();
-//    }
-//
-//    public function getButtonOffsetHorizontal ()
-//    {
-//        return (int) Mage::getStoreConfig('chat/widgetconfig/button_offset_horizontal');
-//    }
-//
-//    public function getButtonOffsetVertical ()
-//    {
-//        return (int) Mage::getStoreConfig('chat/widgetconfig/button_offset_vertical');
-//    }
-
     /* Department Config */
 
+    /**
+     * @return mixed
+     */
     public function getDepartmentsFilter ()
     {
         return Mage::getStoreConfig('chat/departments/filter');
@@ -389,11 +355,17 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
 
     /* Cookie Law Config */
 
+    /**
+     * @return bool
+     */
     public function getCookieLawComply ()
     {
         return Mage::getStoreConfigFlag('chat/widgetconfig/cookielaw_comply');
     }
 
+    /**
+     * @return bool
+     */
     public function getCookieLawConsent ()
     {
         return Mage::getStoreConfigFlag('chat/widgetconfig/cookielaw_consent');
@@ -401,16 +373,25 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
 
     /* Concierge Config */
 
+    /**
+     * @return mixed
+     */
     public function getConciergeAvatar ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/concierge_avatar');
     }
 
+    /**
+     * @return mixed
+     */
     public function getConciergeName ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/concierge_name');
     }
 
+    /**
+     * @return mixed
+     */
     public function getConciergeTitle ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/concierge_title');
@@ -418,31 +399,49 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
 
     /* Badge Config */
 
+    /**
+     * @return mixed
+     */
     public function getBadgeShow()
     {
         return Mage::getStoreConfig('chat/widgetconfig/badge_show');
     }
 
+    /**
+     * @return mixed
+     */
     public function getBadgeLayout()
     {
         return Mage::getStoreConfig('chat/widgetconfig/badge_layout');
     }
 
+    /**
+     * @return mixed
+     */
     public function getBadgeImage()
     {
         return Mage::getStoreConfig('chat/widgetconfig/badge_image');
     }
 
+    /**
+     * @return mixed
+     */
     public function getBadgeText()
     {
         return Mage::getStoreConfig('chat/widgetconfig/badge_text');
     }
 
+    /**
+     * @return mixed
+     */
     public function getBadgeColorPrimary ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/theme_badge_color_primary');
     }
 
+    /**
+     * @return mixed
+     */
     public function getBadgeColor ()
     {
         return Mage::getStoreConfig('chat/widgetconfig/theme_badge_color');
@@ -450,6 +449,9 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
 
     /* Theme Config */
 
+    /**
+     * @return mixed
+     */
     public function getThemePrimaryColor()
     {
         return Mage::getStoreConfig('chat/widgetconfig/theme_primary_color');
