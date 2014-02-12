@@ -28,7 +28,7 @@
             </block>
             <!-- Javascript links for Test Only - activated from backend configuration Zopim Page via the debug field select -->
             <block type="core/template" name="chat_footer">
-                <action method="setTemplate" ifconfig="chat/chatconfig/debug"><template>zopim/test.phtml</template></action>
+                <action method="setTemplate" ifconfig="chat/chatconfig/debug"><template>chat/test.phtml</template></action>
             </block>
         </reference>
     </default>
