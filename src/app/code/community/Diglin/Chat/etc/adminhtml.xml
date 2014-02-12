@@ -27,12 +27,12 @@
             <children>
                 <dashboard translate="title" module="chat">
                     <title>Zopim Dashboard</title>
-                    <action>zopim/index/dashboard</action>
+                    <action>chat/index/dashboard</action>
                     <sort_order>10</sort_order>
                 </dashboard>
                 <account translate="title" module="chat">
                     <title>Account Setup</title>
-                    <action>zopim/index/account</action>
+                    <action>chat/index/account</action>
                     <sort_order>20</sort_order>
                 </account>
                 <config>
@@ -55,7 +55,7 @@
                             <config>
                                 <children>
                                     <chat translate="title" moduel="chat">
-                                        <title>Zopim Chat by diglin</title>
+                                        <title>Zopim Chat by Diglin</title>
                                     </chat>
                                 </children>
                             </config>

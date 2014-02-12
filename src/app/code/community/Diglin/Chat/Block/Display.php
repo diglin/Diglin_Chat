@@ -532,7 +532,7 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
                 'core/template',
                 'zopim_chat',
                 array(
-                    'template' => 'zopim/widget.phtml',
+                    'template' => 'chat/widget.phtml',
                     'key' => $this->getHelper()->getKey(),
                     'zopim_options' => $zopimOptions
                 )

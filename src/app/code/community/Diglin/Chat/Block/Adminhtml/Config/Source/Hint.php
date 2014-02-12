@@ -32,7 +32,7 @@ class Diglin_Chat_Block_Adminhtml_Config_Source_Hint
     {
         $buttonSignUp = $this->getLayout()->createBlock('adminhtml/widget_button')->setData(array(
             'label'     => $this->__('Sign Up or Login to Zopim'),
-            'onclick'   => "window.open('" . $this->getUrl('zopim/index/account') . "', '_self');",
+            'onclick'   => "window.open('" . $this->getUrl('chat/index/account') . "', '_self');",
             'class'     => 'add',
             'type'      => 'button',
             'id'        => 'zopim-account',

@@ -113,7 +113,7 @@
         <layout>
             <updates>
                 <chat>
-                    <file>zopim.xml</file>
+                    <file>chat.xml</file>
                 </chat>
             </updates>
         </layout>
@@ -123,7 +123,7 @@
         <layout>
             <updates>
                 <chat>
-                    <file>zopim.xml</file>
+                    <file>chat.xml</file>
                 </chat>
             </updates>
         </layout>
@@ -135,7 +135,7 @@
                 <use>admin</use>
                 <args>
                     <module>Diglin_Chat_Adminhtml</module>
-                    <frontName>zopim</frontName>
+                    <frontName>chat</frontName>
                 </args>
             </chat>
        </routers>
