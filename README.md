@@ -1,4 +1,4 @@
-# Diglin_Chat - Zopim Live Chat - Official Version 2 #
+# Zopim Live Chat - Official Version 2 #
 
 This <b>OFFICIAL</b> Magento extension displays the [Zopim](http://bit.ly/1kcTNL5) Chat Widget into your shop. Main advantage of this extension is to configure the chat widget in a fast way directly from your Magento installation and customize it per each store and store view.
 
@@ -14,7 +14,7 @@ Additionally, you can use the advanced configuration to configure all options av
 - Chat Badge (text, image, color)
 - Chat Bubble (title, color)
 - Concierge (title, byline, avatar picture)
-- Message Style
+- Message Style (coming soon)
 - Minimized Chat Button (online and offline messages)
 
 ## Documentation
@@ -61,8 +61,8 @@ If you have an error 404 after install the extension and you get access to the c
 - Clear your cache, see the menu <b>System > Cache Management</b>
 - Login and logout from your backend to update the access control
 - Or after installation, save again the Administrator Role to get access to the configuration page of this module. Go to your Magento Backend, then Menu <b>System > Permissions > Roles > Administrator</b> and save again this role.
-- Just configure the key of your account by signin into your Zopim account from the Magento menu <b>Zopim Chat > Account </b>  to automatically set the basic configuration or go into the configuration <b>System > Configuration > Diglin > Zopim Chat</b>. and fill manually the fields "Email Address" and "Key". If you don't have an account, you can get it one directly from the Magento configuration Zopim Chat page, thanks to the link or directly get one from [Zopim Website](http://bit.ly/1kcTNL5).
-If you do manually, you have to find this key. Go into the (Zopim Dashboard)[http://dashboard.zopim.com] then click on "Widget" in the sidebar and find the link "Embed Zopim Live Chat Widget. In the area where the html code is generated, you can find after //zopim.com/?xyzbufoisfgsigsgdgjbsk. Copy the text after the question mark '?' to the Magento configuration field for the <b>"Key of your account"</b>.
+- Just configure the key of your account by signin into your Zopim account from the Magento menu <b>Zopim Chat > Account Setup</b>  to automatically set the basic configuration or go into the configuration <b>System > Configuration > Diglin > Zopim Chat</b>. and fill manually the fields "Email Address" and "Key". If you don't have an account, you can get it one directly from the Magento configuration Zopim Chat page, thanks to the link or directly get one from [Zopim Website](http://bit.ly/1kcTNL5).
+If you do manually, you have to find this key. Go into the [Zopim Dashboard](http://dashboard.zopim.com) then click on "Widget" in the sidebar and find the link "Embed Zopim Live Chat Widget. In the area where the html code is generated, you can find after //zopim.com/?xyzbufoisfgsigsgdgjbsk. Copy the text after the question mark '?' to the Magento configuration field for the <b>"Key of your account"</b>.
 
 ## Customized template
 If you have a customized template, check that you have <b>getChildHtml('before_body_end')</b> in files <b>/frontend/mypackage/mytemplate/template/page/1column.phtml, 2columns-left.phtml, 2columns-right.phtml, 3columns.phtml and empty.phtml</b> after <b>getChildHtml('footer')</b> Eventually you will need to copy the file <b>app/design/frontend/base/default/layout/chat.xml</b> in your layout template.
