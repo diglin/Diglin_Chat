@@ -120,6 +120,7 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
                 "first_name" => $this->getRequest()->getParam('zopimfirstname'),
                 "last_name" => $this->getRequest()->getParam('zopimlastname'),
                 "display_name" => $this->getRequest()->getParam('zopimfirstname') . " " . $this->getRequest()->getParam('zopimlastname'),
+                "aref_id" => '477070', # Diglin
                 "eref" => "",
                 "source" => "magento",
                 "recaptcha_challenge_field" => $this->getRequest()->getParam('recaptcha_challenge_field'),
@@ -131,6 +132,9 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
                 $error["auth"] = $this->__("Error during activation: <b>" . $signupresult["error"] . "</b> Please try again.");
             } else if (isset($signupresult["account_key"])) {
                 $message = $this->__("<b>Thank you for signing up. Please check your mail for your password to complete the process. </b>");
+                $gotologin = 1;
+            } else if (isset($signupresult['url'])) {
+                $message = $this->__('<b>Thank you for signing up. Please click on <button onclick="%s"><span><span>this button</span></span></button> to complete the process.</b>', "window.open('" . $signupresult['url'] . "')");
                 $gotologin = 1;
             } else {
                 $error["auth"] = $this->__("<b>Could not activate account. The Magento installation was unable to contact Zopim servers. Please check with your server administrator to ensure that <a href='http://www.php.net/manual/en/book.curl.php'>PHP Curl</a> is installed and permissions are set correctly.</b>");
