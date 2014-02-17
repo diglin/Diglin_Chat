@@ -119,7 +119,7 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
     public function getName()
     {
         if ($this->getHelper()->allowName() && strlen(trim(Mage::helper('customer')->getCurrentCustomer()->getName())) > 1) {
-            return "\$zopim.livechat.setName('" . Mage::helper('customer')->getCurrentCustomer()->getName() . "');" . "\n";
+            return "\$zopim.livechat.setName('" . $this->jsQuoteEscape(Mage::helper('customer')->getCurrentCustomer()->getName()) . "');" . "\n";
         }
         return;
     }
@@ -132,7 +132,7 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
     public function getEmail()
     {
         if ($this->getHelper()->allowEmail() && strlen(Mage::helper('customer')->getCurrentCustomer()->getEmail()) > 0) {
-            return  "\$zopim.livechat.setEmail('" . Mage::helper('customer')->getCurrentCustomer()->getEmail() . "');" . "\n";
+            return  "\$zopim.livechat.setEmail('" . $this->jsQuoteEscape(Mage::helper('customer')->getCurrentCustomer()->getEmail()) . "');" . "\n";
         }
         return;
     }
@@ -185,11 +185,11 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
         }
 
         if (strlen($this->getHelper()->getBubbleTitle()) > 0) {
-            $out[] = "\$zopim.livechat.bubble.setTitle('" . $this->getHelper()->getBubbleTitle() . "')";
+            $out[] = "\$zopim.livechat.bubble.setTitle('" . $this->jsQuoteEscape($this->getHelper()->getBubbleTitle()) . "')";
         }
 
         if (strlen($this->getHelper()->getBubbleText()) > 0) {
-            $out[] = "\$zopim.livechat.bubble.setText('" . $this->getHelper()->getBubbleText() . "')";
+            $out[] = "\$zopim.livechat.bubble.setText('" . $this->jsQuoteEscape($this->getHelper()->getBubbleText()) . "')";
         }
 
         if ($this->getHelper()->getBubbleShow() == 'show' || $this->getForceBubbleDisplay()) {
@@ -217,7 +217,7 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
         $out = array();
 
         if (strlen($this->getHelper()->getWindowTitle()) > 0) {
-            $out[] = "\$zopim.livechat.window.setTitle('" . $this->getHelper()->getWindowTitle() . "')";
+            $out[] = "\$zopim.livechat.window.setTitle('" . $this->jsQuoteEscape($this->getHelper()->getWindowTitle()) . "')";
         }
         if (strlen($this->getHelper()->getWindowSize()) > 0) {
             $out[] = "\$zopim.livechat.window.setSize('" . $this->getHelper()->getWindowSize() . "')";
@@ -301,7 +301,7 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
 
         if ($this->getHelper()->getDepartmentsFilter()) {
             $departments = explode(',', $this->getHelper()->getDepartmentsFilter());
-            $out[] = "\$zopim.livechat.departments.filter('" . implode("','", $departments) . "')";
+            $out[] = "\$zopim.livechat.departments.filter('" . $this->jsQuoteEscape(implode("','", $departments)) . "')";
         }
 
         if (count($out) > 0) {
@@ -370,11 +370,11 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
         }
 
         if (strlen($this->getHelper()->getConciergeName()) > 0) {
-            $out[] = "\$zopim.livechat.concierge.setName('" . $this->getHelper()->getConciergeName() . "')";
+            $out[] = "\$zopim.livechat.concierge.setName('" . $this->jsQuoteEscape($this->getHelper()->getConciergeName()) . "')";
         }
 
         if (strlen($this->getHelper()->getConciergeTitle()) > 0) {
-            $out[] = "\$zopim.livechat.concierge.setTitle('" . $this->getHelper()->getConciergeTitle() . "')";
+            $out[] = "\$zopim.livechat.concierge.setTitle('" . $this->jsQuoteEscape($this->getHelper()->getConciergeTitle()) . "')";
         }
 
         if (!empty($out)) {
@@ -400,7 +400,7 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
         }
 
         if (strlen($this->getHelper()->getBadgeText()) > 0) {
-            $out[] = "\$zopim.livechat.badge.setText('" . $this->getHelper()->getBadgeText() . "')";
+            $out[] = "\$zopim.livechat.badge.setText('" . $this->jsQuoteEscape($this->getHelper()->getBadgeText()) . "')";
         }
 
         if (strlen($this->getHelper()->getBadgeImage()) > 0) {
