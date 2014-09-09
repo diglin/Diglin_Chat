@@ -22,6 +22,14 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
 {
     private $_options;
 
+    public function getCacheKeyInfo()
+    {
+        return array(
+            $this->getNameInLayout(),
+            Mage::helper('customer')->getCurrentCustomer()->getId()
+        );
+    }
+
     /**
      * Set to force the button display
      *
