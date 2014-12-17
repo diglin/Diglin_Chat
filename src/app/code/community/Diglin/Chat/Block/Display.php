@@ -20,6 +20,16 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
     private $_options;
 
     /**
+     * @param array $args
+     */
+    public function __construct(array $args = array())
+    {
+        parent::__construct($args);
+
+        $this->setCacheLifetime(86400);
+    }
+
+    /**
      * Get Cache Key Info
      *
      * @return array
@@ -27,6 +37,7 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
     public function getCacheKeyInfo()
     {
         return array(
+            'ZOPIM_CHAT',
             $this->getNameInLayout(),
             Mage::helper('customer')->getCurrentCustomer()->getId()
         );
