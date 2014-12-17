@@ -21,15 +21,13 @@
 /* @var $this Mage_Core_Block_Template */
 ?>
 <?php if ($this->getKey()): ?>
-<!--Start of Zopim Live Chat Script-->
+<!--Start of Zopim Live Chat Script by Diglin GmbH-->
 <script type="text/javascript">
 window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
 d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
 _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
 $.src='//v2.zopim.com/?<?php echo $this->getKey() ?>';z.t=+new Date;$.
 type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
-</script><!--End of Zopim Live Chat Script-->
-<!--Zopim Options-->
-<script><?php echo ($this->getZopimOptions()) ? '$zopim(function(){' . "\n" . $this->getZopimOptions() . '});' . "\n" : ''; ?></script>
-<!--EOF Zopim Options-->
-<?php else: ?><!-- Zopim Widget is missing because the key is not defined --><?php endif ?>
+</script><!--End of Zopim Live Chat Script by Diglin GmbH-->
+<!--Zopim Options by Diglin GmbH--><script><?php echo ($this->getZopimOptions()) ? '$zopim(function(){' . "\n" . $this->getZopimOptions() . '});' . "\n" : ''; ?></script><!--EOF Zopim Options by Diglin GmbH-->
+<?php else: ?><!-- Zopim Widget by Diglin GmbH is missing because the key is not defined --><?php endif ?>
