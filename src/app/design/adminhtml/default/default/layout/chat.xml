@@ -22,7 +22,7 @@
 <layout>
     <adminhtml_system_config_edit>
         <reference name="head">
-            <action method="addJs"><file>jscolor/jscolor.js</file></action>
+            <action method="addCss"><file>zopim/zopim.css</file></action>
         </reference>
     </adminhtml_system_config_edit>
 
@@ -34,6 +34,9 @@
     <!--</chat_index_dashboard>-->
 
     <chat_index_account>
+        <reference name="head">
+            <action method="addCss"><file>zopim/zopim.css</file></action>
+        </reference>
         <reference name="content">
             <block type="adminhtml/abstract" name="zopim_account" as="zopim.account" template="chat/account.phtml" />
         </reference>
