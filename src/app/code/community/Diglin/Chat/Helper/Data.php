@@ -343,6 +343,14 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig('chat/widgetconfig/button_position_mobile');
     }
 
+    /**
+     * @return mixed
+     */
+    public function getButtonHideOffline()
+    {
+        return Mage::getStoreConfig('chat/widgetconfig/button_hide_offline');
+    }
+
     /* Department Config */
 
     /**

@@ -44,9 +44,9 @@
                 <debug>0</debug>
                 <!-- values used internally, keep it here as references -->
                 <use_ssl>1</use_ssl>
-                <salt></salt>
-                <key></key>
-                <username></username>
+                <salt/>
+                <key/>
+                <username/>
             </chatconfig>
 
             <widgetconfig>
@@ -63,6 +63,7 @@
 
                 <button_show>1</button_show>
                 <button_position>bl</button_position>
+                <button_hide_offline>0</button_hide_offline>
 
                 <window_title>Support</window_title>
 
