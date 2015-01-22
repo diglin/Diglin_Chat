@@ -39,6 +39,7 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
         return array(
             'ZOPIM_CHAT',
             $this->getNameInLayout(),
+            Mage::app()->getStore()->getId(),
             Mage::helper('customer')->getCurrentCustomer()->getId()
         );
     }
@@ -479,7 +480,7 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
 
         // Specify Bubble Color
         if ($this->getChatHelper()->getWindowTheme() == 'classic' && $this->getChatHelper()->getBubbleColorPrimary()) {
-            switch ($this->getChatHelper()->getBubbleColorPrimary()){
+            switch ($this->getChatHelper()->getBubbleColorPrimary()) {
                 case 'bubble_color_primary':
                     $color = $this->getChatHelper()->getThemePrimaryColor();
                     break;
@@ -490,7 +491,6 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
                         $color = $this->getChatHelper()->getThemePrimaryColor();
                     }
                     break;
-
             }
             if (!empty($color)) {
                 $out[] = "\$zopim.livechat.theme.setColor('#" . ltrim($color, '#') . "', 'bubble')";
