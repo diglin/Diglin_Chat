@@ -46,13 +46,11 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
         $key = Mage::getStoreConfig('chat/chatconfig/key');
         $username = Mage::getStoreConfig('chat/chatconfig/username');
         $salt = Mage::getStoreConfig('chat/chatconfig/salt');
-        $useSSL = Mage::getStoreConfig('chat/chatconfig/use_ssl');
 
         $zopimObject = new Varien_Object(array(
             'key' => $key,
             'username' => $username,
-            'salt' => $salt,
-            'use_ssl' => $useSSL
+            'salt' => $salt
         ));
 
         $error = array();
@@ -63,12 +61,6 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
             $zopimObject->setKey('zopim');
         } else if ($this->getRequest()->getParam('zopimusername') != "") {
             // logging in
-            if ($this->getRequest()->getParam('zopimUseSSL') != "") {
-                $zopimObject->setUseSsl(true);
-            } else {
-                $zopimObject->setUseSsl(false);
-            }
-
             $zopimusername = $this->getRequest()->getParam('zopimusername');
             $zopimpassword = $this->getRequest()->getParam('zopimpassword');
 
@@ -77,7 +69,7 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
                 "password"  => $zopimpassword
             );
 
-            $loginresult = Zend_Json::decode(Mage::helper('chat')->doPostRequest(Diglin_Chat_Helper_Data::ZOPIM_LOGIN_URL, $logindata, $zopimObject->getUseSsl()));
+            $loginresult = Zend_Json::decode(Mage::helper('chat')->doPostRequest(Diglin_Chat_Helper_Data::ZOPIM_LOGIN_URL, $logindata));
 
             Mage::log($loginresult, Zend_Log::DEBUG);
 
@@ -90,7 +82,7 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
                 $zopimObject->setUsername($zopimusername);
                 $zopimObject->setSalt($loginresult["salt"]);
 
-                $account = Zend_Json::decode(Mage::helper('chat')->doPostRequest(Diglin_Chat_Helper_Data::ZOPIM_GETACCOUNTDETAILS_URL, array("salt" => $loginresult["salt"]), $zopimObject->getUseSsl()));
+                $account = Zend_Json::decode(Mage::helper('chat')->doPostRequest(Diglin_Chat_Helper_Data::ZOPIM_GETACCOUNTDETAILS_URL, array("salt" => $loginresult["salt"])));
 
                 Mage::log($account, Zend_Log::DEBUG);
 
@@ -106,12 +98,6 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
             }
         } else if ($this->getRequest()->getParam('zopimfirstname') != "") {
 
-            if ($this->getRequest()->getParam('zopimUseSSL') != "") {
-                $zopimObject->setUseSsl(true);
-            } else {
-                $zopimObject->setUseSsl(false);
-            }
-
             $createdata = array(
                 "email" => $this->getRequest()->getParam('zopimnewemail'),
                 "first_name" => $this->getRequest()->getParam('zopimfirstname'),
@@ -124,7 +110,7 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
                 "recaptcha_response_field" => $this->getRequest()->getParam('recaptcha_response_field')
             );
 
-            $signupresult = Zend_Json::decode(Mage::helper('chat')->doPostRequest(Diglin_Chat_Helper_Data::ZOPIM_SIGNUP_URL, $createdata, $zopimObject->getUseSsl()));
+            $signupresult = Zend_Json::decode(Mage::helper('chat')->doPostRequest(Diglin_Chat_Helper_Data::ZOPIM_SIGNUP_URL, $createdata));
             if (isset($signupresult["error"])) {
                 $error["auth"] = $this->__("Error during activation: <b>" . $signupresult["error"] . "</b> Please try again.");
             } else if (isset($signupresult["account_key"])) {
@@ -144,7 +130,7 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
             if (isset($account)) {
                 $accountDetails = $account;
             } else {
-                $accountDetails = Zend_Json::decode(Mage::helper('chat')->doPostRequest(Diglin_Chat_Helper_Data::ZOPIM_GETACCOUNTDETAILS_URL, array("salt" => $zopimObject->getSalt()), $zopimObject->getUseSsl()));
+                $accountDetails = Zend_Json::decode(Mage::helper('chat')->doPostRequest(Diglin_Chat_Helper_Data::ZOPIM_GETACCOUNTDETAILS_URL, array("salt" => $zopimObject->getSalt())));
             }
 
             if (!isset($accountDetails) || isset($accountDetails["error"])) {
@@ -202,7 +188,6 @@ class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Ac
         $config->saveConfig('chat/chatconfig/key', $zopimObject->getKey(), 'default', 0);
         $config->saveConfig('chat/chatconfig/username', $zopimObject->getUsername(), 'default', 0);
         $config->saveConfig('chat/chatconfig/salt', $zopimObject->getSalt(), 'default', 0);
-        $config->saveConfig('chat/chatconfig/use_ssl', $zopimObject->getUseSsl(), 'default', 0);
 
         Mage::app()->cleanCache(array(Mage_Core_Model_Config::CACHE_TAG));
 

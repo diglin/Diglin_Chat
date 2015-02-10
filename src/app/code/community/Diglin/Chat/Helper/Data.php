@@ -56,15 +56,10 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * @param string $url
      * @param array $_data
-     * @param string $useSSL
      * @return mixed
      */
-    public function doPostRequest($url, $_data, $useSSL)
+    public function doPostRequest($url, $_data)
     {
-        if ($useSSL != "zopimUseSSL") {
-            $url = str_replace("https", "http", $url);
-        }
-
         $data = array();
         while(list($n,$v) = each($_data)){
             $data[] = urlencode($n)."=".urlencode($v);
