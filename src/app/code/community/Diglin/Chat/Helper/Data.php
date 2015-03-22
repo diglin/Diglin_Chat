@@ -67,12 +67,22 @@ class Diglin_Chat_Helper_Data extends Mage_Core_Helper_Abstract
         $data = implode('&', $data);
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+        $options = array(
+            CURLOPT_URL => $url,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $data,
+            CURLOPT_RETURNTRANSFER => true
+        );
+
+        curl_setopt_array($ch, $options);
 
         $response = curl_exec($ch);
+
+        if (curl_error($ch)) {
+            Mage::log('Curl Error for Zopim Login - curl error:' . curl_error($ch) . ' - curl errno:' . curl_errno($ch));
+        }
+
         curl_close($ch);
 
         return $response;
