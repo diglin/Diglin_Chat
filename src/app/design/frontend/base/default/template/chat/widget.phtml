@@ -26,5 +26,10 @@ _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
 $.src='//v2.zopim.com/?<?php echo $this->getKey() ?>';z.t=+new Date;$.
 type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 </script><!--End of Zopim Live Chat Script by Diglin GmbH-->
+<script>
+$zopim(function() {
+    $zopim.livechat.clearAll();
+  });
+</script>
 <!--Zopim Options by Diglin GmbH--><script><?php echo ($this->getZopimOptions()) ? '$zopim(function(){' . "\n" . $this->getZopimOptions() . '});' . "\n" : ''; ?></script><!--EOF Zopim Options by Diglin GmbH-->
 <?php else: ?><!-- Zopim Widget by Diglin GmbH is missing because the key is not defined --><?php endif ?>
