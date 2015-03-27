@@ -19,7 +19,7 @@
 <config>
     <modules>
         <Diglin_Chat>
-            <version>2.0.4</version>
+            <version>2.0.5</version>
         </Diglin_Chat>
     </modules>
     
@@ -34,7 +34,6 @@
                 <disable_sound>0</disable_sound>
                 <debug>0</debug>
                 <!-- values used internally, keep it here as references -->
-                <use_ssl>1</use_ssl>
                 <salt/>
                 <key/>
                 <username/>
