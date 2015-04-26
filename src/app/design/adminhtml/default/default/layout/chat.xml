@@ -21,14 +21,10 @@
         <reference name="head">
             <action method="addCss"><file>zopim/zopim.css</file></action>
         </reference>
+        <reference name="before_body_end">
+            <block type="adminhtml/template" name="footer_chat" as="footer_chat" template="chat/footer.phtml"/>
+        </reference>
     </adminhtml_system_config_edit>
-
-    <!-- Deprecated for security policy on Zopim side -->
-    <!--<chat_index_dashboard>-->
-        <!--<reference name="content">-->
-            <!--<block type="chat/adminhtml_dashboard" name="zopim_dashboard" as="zopim.dashboard" template="chat/dashboard.phtml" />-->
-        <!--</reference>-->
-    <!--</chat_index_dashboard>-->
 
     <chat_index_account>
         <reference name="head">
@@ -36,6 +32,9 @@
         </reference>
         <reference name="content">
             <block type="adminhtml/abstract" name="zopim_account" as="zopim.account" template="chat/account.phtml" />
+        </reference>
+        <reference name="before_body_end">
+            <block type="adminhtml/template" name="footer_chat" as="footer_chat" template="chat/footer.phtml"/>
         </reference>
     </chat_index_account>
 </layout>
