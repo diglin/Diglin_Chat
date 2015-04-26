@@ -19,7 +19,7 @@
 <config>
     <modules>
         <Diglin_Chat>
-            <version>2.0.5</version>
+            <version>2.0.6</version>
         </Diglin_Chat>
     </modules>
 
@@ -33,12 +33,12 @@
                 <widget>classic</widget>
                 <disable_sound>0</disable_sound>
                 <debug>0</debug>
+                <stats>1</stats>
+                <appid>xmx5ec9n</appid>
                 <!-- values used internally, keep it here as references -->
                 <salt/>
                 <key/>
                 <username/>
-                <stats>1</stats>
-                <appid>xmx5ec9n</appid>
             </chatconfig>
 
             <widgetconfig>
