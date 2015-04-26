@@ -98,10 +98,6 @@ if ($this->getIsAuthenticated()) {
                                 <td class="label" style="width:180px;"><?php echo $this->__('Zopim password'); ?></td>
                                 <td class="value"><input class=" input" style="width:200px;padding:2px;" type="password" name="zopimpassword" /></td>
                             </tr>
-                            <tr>
-                                <td class="label" style="width:180px;"><?php echo $this->__('Use SSL'); ?></td>
-                                <td class="value"><input type="checkbox" name="zopimusessl" value="zopimusessl" checked><?php echo $this->__('Uncheck this if you are unable to login'); ?></td>
-                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -140,10 +136,6 @@ if ($this->getIsAuthenticated()) {
                             <tr>
                                 <td class="label" style="width:180px;"><?php echo $this->__('E-mail'); ?></td>
                                 <td class="value"><input class=" input" style="width:200px;padding:2px;" type="text" id="zopimnewemail" name="zopimnewemail" value="<?php echo $this->getRequest()->getParam('zopimnewemail'); ?>" /></td>
-                            </tr>
-                            <tr>
-                                <td class="label" style="width:180px;"><?php echo $this->__('Use SSL'); ?></td>
-                                <td class="value"><input type="checkbox" name="zopimUseSSL" value="zopimUseSSL" checked><?php echo $this->__('Uncheck this if you are unable to login'); ?></td>
                             </tr>
                             <tr>
                                 <td class="label" style="width:180px;"><?php echo $this->__('Verification'); ?></td>
