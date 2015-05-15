@@ -28,6 +28,10 @@ $select = $installer->getConnection()->select()
 $result = $installer->getConnection()->fetchOne($select);
 
 if ($result) {
+    $installer->getConnection()->delete($this->getTable('core/config_data'), "path='chat/widgetconfig/type_config'");
+    $installer->getConnection()->delete($this->getTable('core/config_data'), "path='chat/widgetconfig/window_theme'");
+    $installer->getConnection()->delete($this->getTable('core/config_data'), "path='chat/widgetconfig/theme_bubble_color_primary'");
+
     $installer->getConnection()->insert($this->getTable('core/config_data'), array('path' => 'chat/widgetconfig/type_config', 'value' => 'adv'));
     $installer->getConnection()->insert($this->getTable('core/config_data'), array('path' => 'chat/widgetconfig/window_theme', 'value' => 'classic'));
     $installer->getConnection()->insert($this->getTable('core/config_data'), array('path' => 'chat/widgetconfig/theme_bubble_color_primary', 'value' => 'bubble_color_customized'));
