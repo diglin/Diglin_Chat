@@ -17,6 +17,11 @@
 
 class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Action
 {
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('chat');
+    }
+
     public function indexAction()
     {
         $this->_forward('account');

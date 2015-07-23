@@ -66,17 +66,6 @@
                         <children>
                             <chat translate="title" module="chat">
                                 <title>Zopim Live Chat by Diglin GmbH</title>
-                                <children>
-                                    <dashboard translate="title" module="chat">
-                                        <title>Dashboard</title>
-                                    </dashboard>
-                                    <account translate="title" module="chat">
-                                        <title>Account Setup</title>
-                                    </account>
-                                    <config translate="title" module="chat">
-                                        <title>Configuration</title>
-                                    </config>
-                                </children>
                             </chat>
                         </children>
                     </customer>

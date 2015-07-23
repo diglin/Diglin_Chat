@@ -20,6 +20,7 @@ class Diglin_Chat_Model_Config_Source_Language
 
     /**
      * Options getter
+     * @see https://zopim.zendesk.com/entries/23886593-Changing-Widget-language-using-API
      *
      * @return array
      */
@@ -57,7 +58,7 @@ class Diglin_Chat_Model_Config_Source_Language
             array('value' => 'tr', 'label' => Mage::helper('chat')->__("Turkish")),
             array('value' => 'ur', 'label' => Mage::helper('chat')->__("Urdu")),
             array('value' => 'vi', 'label' => Mage::helper('chat')->__("Vietnamese")),
-            array('value' => 'zh_CN', 'label' => Mage::helper('chat')->__("Chinese (China)")),
+            array('value' => 'zh_CN', 'label' => Mage::helper('chat')->__("Chinese (China)"))
         );
     }
 
