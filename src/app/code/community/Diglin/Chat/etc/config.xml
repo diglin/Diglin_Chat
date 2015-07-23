@@ -19,7 +19,7 @@
 <config>
     <modules>
         <Diglin_Chat>
-            <version>2.0.6</version>
+            <version>2.0.8</version>
         </Diglin_Chat>
     </modules>
 
