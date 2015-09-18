@@ -141,8 +141,8 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
      */
     public function getName()
     {
-        if ($this->getChatHelper()->allowName() && strlen(trim(Mage::helper('customer')->getCurrentCustomer()->getName())) > 1) {
-            return "\$zopim.livechat.setName('" . $this->jsQuoteEscape(Mage::helper('customer')->getCurrentCustomer()->getName()) . "');" . "\n";
+        if ($this->getChatHelper()->allowName() && Mage::getSingleton('customer/session')->isLoggedIn()) {
+            return "\$zopim.livechat.setName('" . $this->jsQuoteEscape(Mage::getSingleton('customer/session')->getCustomer()->getName()) . "');" . "\n";
         }
         return null;
     }
@@ -154,8 +154,8 @@ class Diglin_Chat_Block_Display extends Mage_Core_Block_Template
      */
     public function getEmail()
     {
-        if ($this->getChatHelper()->allowEmail() && strlen(Mage::helper('customer')->getCurrentCustomer()->getEmail()) > 0) {
-            return  "\$zopim.livechat.setEmail('" . $this->jsQuoteEscape(Mage::helper('customer')->getCurrentCustomer()->getEmail()) . "');" . "\n";
+        if ($this->getChatHelper()->allowEmail() && Mage::getSingleton('customer/session')->isLoggedIn()) {
+            return  "\$zopim.livechat.setEmail('" . $this->jsQuoteEscape(Mage::getSingleton('customer/session')->getCustomer()->getEmail()) . "');" . "\n";
         }
         return null;
     }
