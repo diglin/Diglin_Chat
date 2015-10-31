@@ -26,12 +26,12 @@
                 <children>
                     <dashboard translate="title" module="chat">
                         <title>Zopim Dashboard</title>
-                        <action>chat/index/dashboard</action>
+                        <action>adminhtml/chat/dashboard</action>
                         <sort_order>10</sort_order>
                     </dashboard>
                     <account translate="title" module="chat">
                         <title>Account Setup</title>
-                        <action>chat/index/account</action>
+                        <action>adminhtml/chat/account</action>
                         <sort_order>20</sort_order>
                     </account>
                     <config>

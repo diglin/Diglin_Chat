@@ -26,7 +26,7 @@
         </reference>
     </adminhtml_system_config_edit>
 
-    <chat_index_account>
+    <adminhtml_chat_account>
         <reference name="head">
             <action method="addCss"><file>zopim/zopim.css</file></action>
         </reference>
@@ -36,5 +36,5 @@
         <reference name="before_body_end">
             <block type="adminhtml/template" name="footer_chat" as="footer_chat" template="chat/footer.phtml"/>
         </reference>
-    </chat_index_account>
+    </adminhtml_chat_account>
 </layout>

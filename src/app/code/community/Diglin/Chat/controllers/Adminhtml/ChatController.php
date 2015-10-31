@@ -15,7 +15,7 @@
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-class Diglin_Chat_Adminhtml_IndexController extends Mage_Adminhtml_Controller_Action
+class Diglin_Chat_Adminhtml_ChatController extends Mage_Adminhtml_Controller_Action
 {
     protected function _isAllowed()
     {
